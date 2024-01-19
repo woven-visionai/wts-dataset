@@ -254,6 +254,9 @@ Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provide
     ]
 }
 ```
+## Annotation Manner <a name="licenseandcitation"></a>
+
+will be updated with the arXiv paper soon.
 
 ## License and Citation <a name="licenseandcitation"></a>
 
