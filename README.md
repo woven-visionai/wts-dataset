@@ -11,7 +11,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 
 <div id="top" align="center">
   
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](#licenseandcitation)
+[![License](https://img.shields.io/badge/wts_terms-blue)](#licenseandcitation)
 [![](https://img.shields.io/badge/Latest%20release-v1.0-yellow)](#gettingstarted)
 
 </div>
