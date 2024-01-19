@@ -25,7 +25,7 @@ For diverse experimental purposes, we also provide the same detailed textual des
 
 ## Features and Comparison <a name="feature"></a>
 
-WTS provides the largest number of videos with long fine-grained video descriptions in the traffic domain.
+WTS provides the largest number of videos with long fine-grained video descriptions with 3D spatial information in the traffic domain.
 <p align="center">
   <img src="assets/images/comparison.png" width="800">
 </p>
@@ -80,7 +80,7 @@ Two kinds of annotations now are available.
 - BBox for the target pedestrian and vehicle.
 - Description for the traffic scenario focuses on the `location, attention, behavior, context` regarding the pedestrian and vehicle.
 
-Plan to update the 3D Gaze and Location annotations for use, please keep watching!
+Will update the 3D Gaze and Location annotations for use (stay tuned).
 
 Caption annotations for each scenario, notice that multi-view videos share the same caption:
 ```
