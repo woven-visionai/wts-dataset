@@ -26,7 +26,7 @@ For diverse experimental purposes, we also provide the same detailed textual des
 ### Dataset structure
 we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
-- Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
+- Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
 
 **Video Data**
 
@@ -56,7 +56,7 @@ videos
 All pedestrian-related videos from BDD are stored under `external` folder:
 ```
 external/
-└── BDD_TC_5K
+└── BDD_PC_5K
     ├── videos
     │   ├── train
         │   ├── video1004.mp4
@@ -176,7 +176,7 @@ For BDD, each caption annotations correspond with one video for use.
 The annotation format is the same as our collected data caption annotations.
 ```
 external/
-└── BDD_TC_5K
+└── BDD_PC_5K
     ├── annotations
     │   ├── train
     │   │   ├── video1004_caption.json
@@ -191,6 +191,60 @@ external/
 
 Our BBox annotation is frame-based, you could use the below script to extract the frame to align the ID in our annotations.
 ```
-python utils/pose_frame_extraction.py
+python script/frame_extraction.py
+```
+
+### Evaluation
+
+We provide the ground truth files with JSON format and evaluation script for the validation set regarding the video2text task.
+Video and its GT of the validation set are stored following the same structure as `train` under `val` folders.
+
+For our collected data in WTS, the inference results are required to be provided per scenario. 
+Users could feel free to use the multi-view videos in the same scenario folders for validation purposes, 
+as well as multi-view videos in `train` for training purposes.
+For `BDD_PC_5K`, each video has its caption GT, and validation will be done per video.
+
+evaluation script is provided under `evaluation/`, submission(model output) format is defined as:
+```
+{
+    "20230707_12_SN17_T1": [  ##scneario index
+        {
+            "labels": [  ##segment number, this is known information will be given, the user does not need to do the video segmentation.
+                "4"
+            ],
+            "caption_pedestrian": "",  ##caption regarding pedestrian 
+            "caption_vehicle": ""      ##caption regarding vehicle
+        },
+        {
+            "labels": [
+                "3"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "2"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "1"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+
+        },
+        {
+            "labels": [
+                "0"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": "
+        }
+    ]
+}
 ```
 
