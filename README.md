@@ -24,11 +24,14 @@ Each event in WTS is enriched with comprehensive textual descriptions of the obs
 For diverse experimental purposes, we also provide the same detailed textual description annotations for approximately 4.8k publicly sourced pedestrian-related traffic videos from BDD100K for external use as training resource, etc.
 
 ### Dataset structure
-we have two kinds of video data provided for using:
+we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
-- Filtered pedestrian-centric [BDD](https://www.vis.xyz/bdd100k/) data with WTS caption annotations.
+- Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
 
-**Video Data**, all collected WTS video data are stored under the videos folder. 
+**Video Data**
+All collected WTS video data are stored under the `videos` folder. 
+For the multiple-view videos, part of the scenarios will proceed across the views.
+We provide the bbox annotations for the target pedestrian and vehicle for selecting the target video once needed. 
 ```
 videos
 ├── train
@@ -64,25 +67,28 @@ external/
 ```
 
 **Annotation**
-For WTS collected data,
+Two kinds of annotations currently are available. 
+- BBox for the target pedestrian and vehicle.
+- Description for the traffic scenario focuses on the `location, attention, behavior, context` regarding the pedestrian and vehicle.
+
+plan to update the 3D Gaze and Location annotations for use, please keep watching!
+
+BBox annotations are stored with the following structure:
 ```
 annotations
-├── bbox
-│   ├── pedestrian
+├── bbox_first_frame ##bbox for the first frame of each segment
+│   ├── pedestrian  ##bbox for pedestrian and vehicle respectively 
 │   │   ├── train
 │   │   │   ├── 20230707_12_SN17_T1
 │   │   │   │   └── overhead_view
-│   │   │   │       ├── 20230707_12_SN17_T1_Camera1_0_bbox.json
+│   │   │   │       ├── 20230707_12_SN17_T1_Camera1_0_bbox.json  ##bbox for per video
 │   │   │   │       ├── 20230707_12_SN17_T1_Camera2_3_bbox.json
 │   │   │   │       ├── 20230707_12_SN17_T1_Camera3_1_bbox.json
 │   │   │   │       └── 20230707_12_SN17_T1_Camera4_2_bbox.json
-│   │   │   ├── 20230707_15_SY4_T1
-│   │   │   │   └── overhead_view
-│   │   │   │       ├── 20230707_15_SY4_T1_Camera1_0_bbox.json
-│   │   │   │       ├── 20230707_15_SY4_T1_Camera2_1_bbox.json
-│   │   │   │       └── 20230707_15_SY4_T1_Camera3_2_bbox.json
+
 ...
 ```
+
 For BDD,
 ```
 external/
