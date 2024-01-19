@@ -12,7 +12,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 <div id="top" align="center">
   
 [![License](https://img.shields.io/badge/license-wts_terms%20-blue)](#licenseandcitation)
-[![](https://img.shields.io/badge/Latest%20release-v1.0-yellow)](#gettingstarted)
+[![](https://img.shields.io/badge/Latest%20release-v1.0-yellow)](#datastructure)
 
 </div>
 
@@ -30,7 +30,7 @@ WTS provides the largest number of videos with long fine-grained video descripti
   <img src="assets/images/comparison.png" width="800">
 </p>
 
-## Dataset structure
+## Dataset structure <a name="datastructure"></a>
 we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
 - Filtered pedestrian-centric videos from [BDD100K]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
