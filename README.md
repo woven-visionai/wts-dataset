@@ -209,7 +209,7 @@ evaluation script is provided under `evaluation/`, submission(model output) form
 {
     "20230707_12_SN17_T1": [  ##scneario index
         {
-            "labels": [  ##segment number, this is known information will be given, the user does not need to do the video segmentation.
+            "labels": [  ##segment number, this is known information will be given
                 "4"
             ],
             "caption_pedestrian": "",  ##caption regarding pedestrian 
