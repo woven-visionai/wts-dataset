@@ -16,7 +16,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 
 </div>
 
-## WTS Dataset <a name="introduction"></a>
+## WTS (Woven Traffic Safety) Dataset <a name="introduction"></a>
 
 The [Woven Traffic Safety (WTS) Dataset](https://woven-visionai.github.io/wts-dataset-homepage/) is designed to emphasize detailed behaviors of both vehicles and pedestrians within a variety of staged traffic events including accidents.
 Comprising over 1.2k video events across over 130 distinct traffic scenarios, WTS integrates diverse perspectives from vehicle ego and fixed overhead cameras in a vehicle-infrastructure cooperative environment.
