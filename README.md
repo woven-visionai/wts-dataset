@@ -26,7 +26,9 @@ For diverse experimental purposes, we also provide the same detailed textual des
 ## Features and Comparison <a name="feature"></a>
 
 WTS provides the largest number of videos with long fine-grained traffic-related descriptions.
-
+<p align="center">
+  <img src="assets/images/comparison.png">
+</p>
 
 ## Dataset structure
 we have two kinds of video data provided for use:
