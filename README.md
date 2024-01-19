@@ -24,7 +24,7 @@ we have two kinds of video data provided for using:
 - Collected real-world WTS data including traffic accidents.
 - Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
 
-All collected WTS video data are stored under the videos folder. Example of the data in `videos` folder:
+For video data, all collected WTS video data are stored under the videos folder. 
 ```
 videos
 ├── train
@@ -43,5 +43,18 @@ videos
 │   │   │   └── 20230707_15_SY4_T1_Camera3_2.mp4
 │   │   └── vehicle_view
 │   │       └── 20230707_15_SY4_T1_vehicle_view.mp4
+...
+```
+All pedestrian-related videos from BDD are stored under `external` folder:
+```
+external/
+└── BDD_TC_5K
+    ├── videos
+    │   ├── train
+        │   ├── video1004.mp4
+        │   ├── video1006.mp4
+        │   ├── video1009.mp4
+        │   ├── video100.mp4
+        │   ├── video1015.mp4
 ...
 ```
