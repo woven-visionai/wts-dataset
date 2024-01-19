@@ -196,15 +196,15 @@ python script/frame_extraction.py
 
 ### Evaluation
 
-We provide the ground truth files with JSON format and evaluation script for the validation set regarding the video2text task.
+We provide the validation set for the video2text task with a given segment duration.
 Video and its GT of the validation set are stored following the same structure as `train` under `val` folders.
 
 For our collected data in WTS, the inference results are required to be provided per scenario. 
 Users could feel free to use the multi-view videos in the same scenario folders for validation purposes, 
 as well as multi-view videos in `train` for training purposes.
-For `BDD_PC_5K`, each video has its caption GT, and validation will be done per video.
+For `BDD_PC_5K`, each video has its caption GT in `train` and `val`, and validation will be done per video.
 
-evaluation script is provided under `evaluation/`, submission(model output) format is defined as:
+evaluation script will be provided under `evaluation/` soon, submission(model output) format is defined as:
 ```
 {
     "20230707_12_SN17_T1": [  ##scneario index
