@@ -141,10 +141,36 @@ annotations
 │   │   │   │       ├── 20230707_12_SN17_T1_Camera2_3_bbox.json
 │   │   │   │       ├── 20230707_12_SN17_T1_Camera3_1_bbox.json
 │   │   │   │       └── 20230707_12_SN17_T1_Camera4_2_bbox.json
-
 ...
 ```
-
+BBox format are following COCO format, you could use our `frame_extraction` script to reproduce the frames with `image_id`.
+```
+{
+    "annotations": [
+        {
+            "image_id": 904,
+            "bbox": [
+                1004.4933333333333,
+                163.28666666666666,
+                12.946666666666667,
+                11.713333333333333
+            ],
+            "auto-generated": false,  ##human annotated frame
+            "phase_number": "0"
+        },
+        {
+            "image_id": 905,
+            "bbox": [
+                1007.1933333333333,
+                162.20666666666668,
+                12.946666666666667,
+                11.713333333333333
+            ],
+            "auto-generated": true,  ##generated bbox annotation for the frame
+            "phase_number": "0"
+        },
+...
+```
 
 For BDD,
 ```
