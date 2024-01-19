@@ -29,6 +29,7 @@ we have two kinds of video data provided for use:
 - Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
 
 **Video Data**
+
 All collected WTS video data are stored under the `videos` folder. 
 For the multiple-view videos, part of the scenarios will proceed across the views.
 We provide the bbox annotations for the target pedestrian and vehicle for selecting the target video once needed. 
@@ -67,7 +68,8 @@ external/
 ```
 
 **Annotation**
-Two kinds of annotations currently are available. 
+
+Two kinds of annotations now are available. 
 - BBox for the target pedestrian and vehicle.
 - Description for the traffic scenario focuses on the `location, attention, behavior, context` regarding the pedestrian and vehicle.
 
@@ -88,6 +90,28 @@ annotations
   │   │   │   └── 20230707_15_SY4_T1_caption.json
   │   │   └── vehicle_view
   │   │       └── 20230707_15_SY4_T1_caption.json
+...
+```
+Caption JSON format:
+```
+{
+    "id": 722,
+    "overhead_videos": [ ## caption related videos
+        "20230707_8_SN46_T1_Camera1_0.mp4",
+        "20230707_8_SN46_T1_Camera2(2)_1.mp4",
+        "20230707_8_SN46_T1_Camera2_2.mp4",
+        "20230707_8_SN46_T1_Camera3_3.mp4"
+    ],
+    "event_phase": [
+        {
+            "labels": [
+                "4"  ##segment number
+            ],
+            "caption_pedestrian": "The pedestrian stands still on the left side behind the vehicle, ...",  ##caption for pedestrian during the segment
+            "caption_vehicle": "The vehicle was positioned diagonally to ...",  ##caption for vehicle during the segment
+            "start_time": "39.395",  ##start time of the segment
+            "end_time": "44.663"     ##end time of the segment
+        },
 ...
 ```
 
