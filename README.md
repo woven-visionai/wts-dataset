@@ -20,6 +20,28 @@ Dataset download [**link**](TBA) (serves as official source for [`AI City Challe
 
 The [Woven Traffic Safety (WTS) Dataset](TBA) 
 ### Dataset structure
-After the extraction of the dataset is over, you will see the dataset structure as follows.
+we have two kinds of video data provided for using:
+- Collected real-world WTS data including traffic accidents.
+- Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
 
-For videos, video data will be stored under each session folders. Example of untrimmed videos under `untrimmed/video` folder:
+All collected WTS video data are stored under the videos folder. Example of the data in `videos` folder:
+```
+videos
+├── train
+│   ├── 20230707_12_SN17_T1  ##scenario index
+│   │   ├── overhead_view  ##different overhead view about the scenario
+│   │   │   ├── 20230707_12_SN17_T1_Camera1_0.mp4
+│   │   │   ├── 20230707_12_SN17_T1_Camera2_3.mp4
+│   │   │   ├── 20230707_12_SN17_T1_Camera3_1.mp4
+│   │   │   └── 20230707_12_SN17_T1_Camera4_2.mp4
+│   │   └── vehicle_view  ##vehicle ego-view about the scenario
+│   │       └── 20230707_12_SN17_T1_vehicle_view.mp4
+│   ├── 20230707_15_SY4_T1
+│   │   ├── overhead_view
+│   │   │   ├── 20230707_15_SY4_T1_Camera1_0.mp4
+│   │   │   ├── 20230707_15_SY4_T1_Camera2_1.mp4
+│   │   │   └── 20230707_15_SY4_T1_Camera3_2.mp4
+│   │   └── vehicle_view
+│   │       └── 20230707_15_SY4_T1_vehicle_view.mp4
+...
+```
