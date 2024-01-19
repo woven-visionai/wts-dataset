@@ -25,7 +25,7 @@ For diverse experimental purposes, we also provide the same detailed textual des
 
 ## Features and Comparison <a name="feature"></a>
 
-WTS provides the largest number of videos with long fine-grained traffic-related descriptions.
+WTS provides the largest number of videos with long fine-grained video descriptions in the traffic domain.
 <p align="center">
   <img src="assets/images/comparison.png" width="800">
 </p>
