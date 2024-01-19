@@ -28,7 +28,7 @@ we have two kinds of video data provided for using:
 - Collected real-world WTS data including traffic accidents.
 - Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with out WTS annotations.
 
-For video data, all collected WTS video data are stored under the videos folder. 
+**Video Data**, all collected WTS video data are stored under the videos folder. 
 ```
 videos
 ├── train
@@ -60,5 +60,39 @@ external/
         │   ├── video1009.mp4
         │   ├── video100.mp4
         │   ├── video1015.mp4
+...
+```
+
+**Annotation**
+For WTS collected data,
+```
+annotations
+├── bbox
+│   ├── pedestrian
+│   │   ├── train
+│   │   │   ├── 20230707_12_SN17_T1
+│   │   │   │   └── overhead_view
+│   │   │   │       ├── 20230707_12_SN17_T1_Camera1_0_bbox.json
+│   │   │   │       ├── 20230707_12_SN17_T1_Camera2_3_bbox.json
+│   │   │   │       ├── 20230707_12_SN17_T1_Camera3_1_bbox.json
+│   │   │   │       └── 20230707_12_SN17_T1_Camera4_2_bbox.json
+│   │   │   ├── 20230707_15_SY4_T1
+│   │   │   │   └── overhead_view
+│   │   │   │       ├── 20230707_15_SY4_T1_Camera1_0_bbox.json
+│   │   │   │       ├── 20230707_15_SY4_T1_Camera2_1_bbox.json
+│   │   │   │       └── 20230707_15_SY4_T1_Camera3_2_bbox.json
+...
+```
+For BDD,
+```
+external/
+└── BDD_TC_5K
+    ├── annotations
+    │   ├── train
+    │   │   ├── video1004_caption.json
+    │   │   ├── video1006_caption.json
+    │   │   ├── video1009_caption.json
+    │   │   ├── video100_caption.json
+    │   │   ├── video1015_caption.json
 ...
 ```
