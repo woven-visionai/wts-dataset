@@ -26,7 +26,7 @@ For diverse experimental purposes, we also provide the same detailed textual des
 ### Dataset structure
 we have two kinds of video data provided for using:
 - Collected real-world WTS data including traffic accidents.
-- Filtered pedestrian-centric [BDD](https://www.vis.xyz/bdd100k/) data with out WTS annotations.
+- Filtered pedestrian-centric [BDD](https://www.vis.xyz/bdd100k/) data with WTS caption annotations.
 
 **Video Data**, all collected WTS video data are stored under the videos folder. 
 ```
