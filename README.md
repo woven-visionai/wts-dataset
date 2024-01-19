@@ -157,10 +157,10 @@ BBox format follows COCO format, you could use our `frame_extraction` script to 
         {
             "image_id": 904, ## frame ID
             "bbox": [
-                1004.4933333333333, ##
-                163.28666666666666,
-                12.946666666666667,
-                11.713333333333333
+                1004.4933333333333, ## x_min 
+                163.28666666666666, ## y_min
+                12.946666666666667, ## width
+                11.713333333333333  ## height
             ],
             "auto-generated": false,  ##human annotated frame
             "phase_number": "0"
