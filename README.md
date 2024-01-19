@@ -105,7 +105,7 @@ Caption JSON format:
     "id": 722,
     "overhead_videos": [ ## caption related videos
         "20230707_8_SN46_T1_Camera1_0.mp4",
-        "20230707_8_SN46_T1_Camera2(2)_1.mp4",
+        "20230707_8_SN46_T1_Camera2_1.mp4",
         "20230707_8_SN46_T1_Camera2_2.mp4",
         "20230707_8_SN46_T1_Camera3_3.mp4"
     ],
