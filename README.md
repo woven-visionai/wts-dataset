@@ -1,7 +1,7 @@
 <div id="top" align="center">
 
 <p align="center">
-  <img src="assets/images/title.jpg">
+  <img src="assets/images/overview.jpg">
 </p>
 
 **WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Description Understanding**
