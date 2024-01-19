@@ -26,7 +26,7 @@ For diverse experimental purposes, we also provide the same detailed textual des
 ## Dataset structure
 we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
-- Filtered pedestrian-centric [BDD]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
+- Filtered pedestrian-centric videos from [BDD100K]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
 
 **Video Data**
 
@@ -251,15 +251,3 @@ evaluation script will be provided under `evaluation/` soon, submission(model ou
 ## License and Citation <a name="licenseandcitation"></a>
 
 please refer to our dataset [homepage](https://woven-visionai.github.io/wts-dataset-homepage/)
-
-if you use this dataset, please also cite the BDD100k paper:
-```
-@InProceedings{bdd100k,
-    author = {Yu, Fisher and Chen, Haofeng and Wang, Xin and Xian, Wenqi and Chen,
-              Yingying and Liu, Fangchen and Madhavan, Vashisht and Darrell, Trevor},
-    title = {BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning},
-    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month = {June},
-    year = {2020}
-}
-```
