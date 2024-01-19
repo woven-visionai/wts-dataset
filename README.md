@@ -249,7 +249,7 @@ Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provide
                 "0"
             ],
             "caption_pedestrian": "",
-            "caption_vehicle": "
+            "caption_vehicle: ""
         }
     ]
 }
