@@ -122,10 +122,10 @@ Caption JSON format:
 ...
 ```
 
-BBox annotations for the first frame of each segment in the video:
+BBox annotations for the first frame of each segment in the video, notice that not all videos have the bbox as there are some views that can not cover the pedestrian or vehicle.
 ```
 annotations
-├── bbox_first ##bbox for the first frame of each segment
+├── bbox_annotated ##bbox for the first frame of each segment
 │   ├── pedestrian  ##bbox for pedestrian and vehicle respectively 
 │   │   ├── train
 │   │   │   ├── 20230707_12_SN17_T1
