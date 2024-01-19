@@ -4,7 +4,7 @@
   <img src="assets/images/overview.png">
 </p>
 
-**WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Description Understanding**
+**WTS:A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding**
 
 Dataset download [**link**](TBA) (serves as official source for [`AI City Challenge Track2 @ CVPR2024`](TBA))
 </div>
