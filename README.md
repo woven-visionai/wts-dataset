@@ -33,7 +33,7 @@ WTS provides the largest number of videos with long fine-grained video descripti
 ## Dataset Structure <a name="datastructure"></a>
 we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
-- Filtered pedestrian-centric videos from [BDD100K]([/docs/data_prep_nus.md](https://www.vis.xyz/bdd100k/)https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
+- Filtered pedestrian-centric videos from [BDD100K](https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
 
 **Video Data**
 
