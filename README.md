@@ -211,7 +211,8 @@ Users could feel free to use the multi-view videos in the same scenario folders 
 as well as multi-view videos in `train` for training purposes.
 For `BDD_PC_5K`, each video has its caption GT in `train` and `val`, and validation will be done per video.
 
-Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provided under `evaluation/` soon, submission(model output) format is defined as:
+Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provided under `evaluation/` soon, notice that only caption annotations will be used for the challenge.
+Submission(model output) format is defined as:
 ```
 {
     "20230707_12_SN17_T1": [  ##scneario index
