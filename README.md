@@ -26,6 +26,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 
 ### Update List <a name="update"></a>
 
+- [ ] First frame bbox for each segment. (Now 70% provided)
 - [ ] Generated bbox for target pedesrian and vehicle.
 - [ ] Evaluation code.
 - [ ] Dataset arXiv paper 
