@@ -19,7 +19,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
-- **`Note:`** for the purpose of joining the AI City Challenge Track2 2024, Please make sure you fill up the [form](https://docs.google.com/forms/d/e/1FAIpQLSdOVC33d-R23PCuBdSsmo08e-98HiDLykhIIAzryjzjYoilVQ/viewform) from AI City Challenge as well.
+- **`Note:`** for the purpose of joining the AI City Challenge Track2 2024, please make sure you fill up the [form](https://docs.google.com/forms/d/e/1FAIpQLSdOVC33d-R23PCuBdSsmo08e-98HiDLykhIIAzryjzjYoilVQ/viewform) from AI City Challenge as well.
   
 - **`[2024/01/22]`** [AI City Challenge 2024 Track2](https://www.aicitychallenge.org/2024-challenge-tracks/) opened.
 - **`[2024/01/22]`** WTS dataset released.
