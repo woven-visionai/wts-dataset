@@ -11,9 +11,9 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 
 <div id="top" align="center">
   
-[![License](https://img.shields.io/badge/license-wts_terms%20-blue)](#licenseandcitation)
+[![License](https://img.shields.io/badge/License-wts_terms%20-blue)](#licenseandcitation)
 [![](https://img.shields.io/badge/Latest%20release-v1.0-yellow)](#datastructure)
-
+[![Project](https://img.shields.io/badge/Project-website%20-green)](https://woven-visionai.github.io/wts-dataset-homepage/)
 </div>
 
 ## WTS Dataset <a name="introduction"></a>
