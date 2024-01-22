@@ -4,6 +4,20 @@
   <img src="assets/images/overview.png">
 </p>
 
+## News and Updates</a>
+
+### News <a name="news"></a>
+
+- **`[2024/01/22]`** AI City Challenge 2024 Track2 Opened.
+- **`[2024/01/21]`** WTS dataset [project page](https://woven-visionai.github.io/wts-dataset-homepage/) released.
+- **`[2024/01/20]`** WTS dataset released.
+
+### Update List <a name="update"></a>
+
+- [ ] Generated bbox for target pedesrian and vehicle.
+- [ ] Evaluation code.
+- [ ] Dataset arXiv paper 
+
 **WTS:A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding**
 
 Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) (serves as official source for [`AI City Challenge 2024 Track2 @ CVPR2024`](https://www.aicitychallenge.org/2024-challenge-tracks/))
