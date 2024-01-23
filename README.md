@@ -57,7 +57,7 @@ we have two kinds of video data provided for use:
 
 All collected WTS video data are stored under the `videos` folder. 
 For the multiple-view videos, part of the scenarios will proceed across the views.
-We provide the bbox annotations for the target pedestrian and vehicle for selecting the target video once needed. 
+We also provide the bbox annotations for the target pedestrian and vehicle for selecting the target video once needed. 
 ```
 videos
 ├── train
@@ -219,6 +219,10 @@ Our BBox annotation is frame-based, you could use the below script to extract th
 python script/frame_extraction.py
 ```
 
+The caption annotation are share with the videos in the same scenario floders in WTS collected video part.
+We also provide a list of which camera views are mainly used as reference during the annotaiton, that views are covered well of the whole scenarios in 
+`view_used_as_main_reference.csv` file. User could feel free to use it.
+
 ## Evaluation
 
 We provide the validation set for the video2text task with a given segment duration.
@@ -233,7 +237,7 @@ Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provide
 Submission(model output) format is defined as:
 ```
 {
-    "20230707_12_SN17_T1": [  ##scneario index
+    "20230707_12_SN17_T1": [  ##scneario index for multiple view situations OR video name for single view data in "normal_trimmed" and "BDD_PC_5K" folders.
         {
             "labels": [  ##segment number, this is known information will be given
                 "4"
@@ -273,6 +277,9 @@ Submission(model output) format is defined as:
     ]
 }
 ```
+
+Notice that please submit one JSON covered everthing.
+
 ## Annotation Manner <a name="licenseandcitation"></a>
 
 will be updated with the arXiv paper soon.
