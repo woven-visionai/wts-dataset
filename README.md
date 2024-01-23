@@ -214,14 +214,14 @@ external/
 
 ## Data Preparation
 
-Our BBox annotation is frame-based, you could use the below script to extract the frame to align the ID in our annotations.
+- Our BBox annotation is frame-based, you could use the below script to extract the frame to align the ID in our annotations.
 ```
 python script/frame_extraction.py
 ```
 
-The caption annotation are share with the videos in the same scenario floders in WTS collected video part.
-We also provide a list of which camera views are mainly used as reference during the annotaiton, that views are covered well of the whole scenarios in 
-`view_used_as_main_reference.csv` file. User could feel free to use it.
+- The caption annotation are share with the videos in the same scenario floders in WTS collected video part.
+We provide a list of which camera views are mainly used as reference during the annotaiton, that views are covered well of the whole scenarios in 
+`view_used_as_main_reference.csv`. User could feel free to use it.
 
 ## Evaluation
 
