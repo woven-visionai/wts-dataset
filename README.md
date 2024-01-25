@@ -100,7 +100,7 @@ Two kinds of annotations now are available.
 
 Will update the 3D Gaze and Location annotations for use (stay tuned).
 
-Caption annotations for each scenario, notice that multi-view videos share the same caption:
+Notice that the videos from overhead and vehicle in the same scneario index folder will share the same caption.
 ```
 annotations
 ├──caption/
