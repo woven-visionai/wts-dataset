@@ -219,9 +219,9 @@ external/
 python script/frame_extraction.py
 ```
 
-- The caption annotation are share with the videos in the same scenario floders in WTS collected video part.
-We provide a list of which camera views are mainly used as reference during the annotaiton, that views are covered well of the whole scenarios in 
-`view_used_as_main_reference.csv` as below format. User could feel free to use it.
+- The caption annotations are shared with the videos in the same scenario folders in WTS collected video part.
+We provide a list of which camera views are mainly used as a reference during the annotation, thuss which views are covered well of the whole scenarios in 
+`view_used_as_main_reference.csv` as below format. Users could feel free to use it.
 ```
 <Scene,Viewpoint1_video_name,Viewpoint2_video_name,Viewpoint3_video_name,...>  ##maximum to 4 views
 20230707_4_CN35_T1,20230707_4_CN35_T1_Camera3_0.mp4,20230707_4_CN35_T1_Camera4_1.mp4
