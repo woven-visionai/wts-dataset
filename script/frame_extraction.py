@@ -3,7 +3,7 @@ import cv2
 def processing(video_path):
   
   vidcap = cv2.VideoCapture(video_path)
-  readable,frame = vidcap.read()
+  readable,image = vidcap.read()
   count = 0
   
   while readable:
