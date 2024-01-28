@@ -292,4 +292,4 @@ will be updated with the arXiv paper soon.
 
 ## License and Citation <a name="licenseandcitation"></a>
 
-please refer to our dataset [project page](https://woven-visionai.github.io/wts-dataset-homepage/)
+will update the citation with arXiv paper and please refer to our dataset for license [project page](https://woven-visionai.github.io/wts-dataset-homepage/)
