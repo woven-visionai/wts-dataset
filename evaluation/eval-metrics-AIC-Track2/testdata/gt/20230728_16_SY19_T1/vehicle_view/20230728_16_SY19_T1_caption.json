@@ -1,0 +1,50 @@
+{
+    "vehicle_view": "20230728_16_SY19_T1_vehicle_view.mp4",
+    "event_phase": [
+        {
+            "labels": [
+                "1"
+            ],
+            "caption_pedestrian": "The pedestrian, a man in his 30s with a height of 170 cm, was standing still on the road, diagonally to the left in front of the vehicle. He was wearing a black T-shirt and black slacks, giving a bright appearance against the clear weather. The road surface was dry and level. The pedestrian was unaware of the vehicle approaching him. His line of sight was in front, in the direction of travel, aligning with the vehicle's movement. He seemed to be facing the same direction as the vehicle, indicating his body orientation. The relative distance between the pedestrian and the vehicle was near. Despite the surroundings, the pedestrian remained stationary in his actions.",
+            "caption_vehicle": "The vehicle is currently positioned behind and to the right of a pedestrian. It is relatively close to the pedestrian, and the driver has a clear view of them. The vehicle is proceeding straight ahead without any deviations. The environment surrounding the event consists of a male pedestrian in his 30s. He is approximately 170 cm tall and is wearing a black T-shirt on his upper body and black slacks on his lower body. The overall brightness of the environment is bright, and the weather is clear. The road surface is dry and level, making it easier for the vehicle to maintain stability while driving.",
+            "start_time": "0.973",
+            "end_time": "1.829"
+        },
+        {
+            "labels": [
+                "0"
+            ],
+            "caption_pedestrian": "The pedestrian, a male in his 30s, stood near the vehicle. His body was oriented in the same direction as the vehicle, and he was positioned diagonally to the left in front of it. His line of sight was focused in front, in the direction of travel. Closely watching his surroundings, he seemed unaware of the vehicle's presence. His general action was to continue going straight ahead at a slow speed. The environment conditions around him were bright, with clear weather and a dry, level road surface. He was wearing a black T-shirt and black slacks and stood at a height of 170 cm. Overall, the pedestrian appeared to be calm and unaware of any potential danger from the vehicle as he continued on his path ahead.",
+            "caption_vehicle": "The vehicle was situated behind and to the right of a pedestrian, at a relatively close distance. The pedestrian was clearly visible within the vehicle's field of view. The vehicle was about to initiate movement at a speed of 5 km/h. Meanwhile, the environment condition indicated that the pedestrian was a male in his 30s, with a height of 170 cm. He was wearing a black T-shirt on the upper body and black slacks on the lower body. The brightness of the surroundings was bright, with clear weather and a dry, level road surface. These were the circumstances surrounding the event involving the vehicle, presenting a concise and objective depiction of the situation.",
+            "start_time": "0.00",
+            "end_time": "0.973"
+        },
+        {
+            "labels": [
+                "2"
+            ],
+            "caption_pedestrian": "The pedestrian, a male in his 30s wearing a black T-shirt and black slacks, was walking unaware of the vehicle approaching him. He was oriented in the same direction as the vehicle, positioned diagonally to the left in front of it. His line of sight was focused in front of him, aligned with the direction of travel. Going straight ahead, he seemed to be unaware of the vehicle and its presence. The environment conditions were bright with clear weather and a dry road surface. The road was level and the pedestrian seemed to be comfortable in his surroundings. Overall, the pedestrian appeared to be engaged in his own activities, displaying a calm demeanor as he continued walking straight ahead without encountering any hindrances.",
+            "caption_vehicle": "The vehicle is located behind and to the right of the pedestrian, at a close distance. The pedestrian is visible within the vehicle's field of view. The vehicle is moving straight ahead at a speed of 5 km/h. In terms of the environment, the pedestrian is a male in his 30s with a height of 170 cm. He is wearing a black T-shirt and black slacks. The brightness is bright, and the weather is clear. The road surface conditions are dry and level.",
+            "start_time": "1.837",
+            "end_time": "2.731"
+        },
+        {
+            "labels": [
+                "4"
+            ],
+            "caption_pedestrian": "The pedestrian, a man in his 30s, was walking in the same direction as the vehicle. He was positioned diagonally to the left in front of the vehicle, at a close distance. His line of sight was directed in front, following the direction of travel. The pedestrian was closely watching his surroundings, unaware of the vehicle's presence. Suddenly, a collision occurred between the pedestrian and the vehicle. The man's attire consisted of a black T-shirt and black slacks, with a height of 170 cm. The environment conditions were bright and clear, with dry road surface conditions and a level incline. Despite the favorable weather and road conditions, the accident took place due to the pedestrian's lack of awareness of the vehicle's presence.",
+            "caption_vehicle": "The vehicle is positioned behind and to the right of the pedestrian, and they are close to each other. The pedestrian is clearly visible within the vehicle's field of view. The vehicle is going straight ahead, but its speed is 0 km/h, indicating that it is stationary. The male pedestrian is in his 30s and has a height of approximately 170 cm. He is wearing a black T-shirt and black slacks. The environmental conditions are bright, with clear weather and a dry road surface that is level.",
+            "start_time": "7.723",
+            "end_time": "10.731"
+        },
+        {
+            "labels": [
+                "3"
+            ],
+            "caption_pedestrian": "The pedestrian is a male in his 30s, approximately 170 cm tall. He is wearing a black T-shirt and black slacks. The weather is clear, and the road surface is dry and level. The brightness of the environment is high. As the pedestrian walks slowly, his body is oriented in the same direction as the vehicle. He is positioned diagonally to the left in front of the vehicle, and his relative distance from the vehicle is close. His line of sight is in front, in the direction of travel, and he is closely watching his surroundings. However, he is unaware of the vehicle approaching. The pedestrian's general action is to continue going straight ahead.",
+            "caption_vehicle": "The vehicle is positioned behind and to the right of the pedestrian, indicating that it is following behind at a close distance. The pedestrian is visible within the vehicle's field of view. The vehicle is moving straight ahead with a speed of 5 km/h. In the environment, the person crossing the road is a male in his 30s with a height of 170 cm. He is wearing a black T-shirt on the upper body and black slacks on the lower body. The brightness of the surroundings is bright, with clear weather conditions and a dry road surface that is level. Based on this information, it can be inferred that the vehicle is driving in a cautious manner as it maintains a close distance behind the pedestrian. The pedestrian's visibility suggests that the driver is aware of their presence. The environment conditions, including the brightness and weather, provide optimal visibility for both the vehicle and the pedestrian. The dry road surface and level incline further contribute to safe driving conditions. Overall, the event portrays a typical scenario where the vehicle is following a pedestrian while adhering to appropriate driving speed and conditions.",
+            "start_time": "2.739",
+            "end_time": "7.748"
+        }
+    ]
+}
