@@ -30,7 +30,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 - [x] List of views used as main reference during annotation. (2024/01/23)
 - [ ] First frame annotated bbox for each segment. (70% provided)
 - [ ] Generated bbox for target pedesrian and vehicle.
-- [ ] Evaluation code.
+- [x] Evaluation code.
 - [ ] 3D Gaze annotation release.
 - [ ] Dataset arXiv paper. 
 
