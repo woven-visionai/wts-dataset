@@ -20,7 +20,8 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 
 ### News <a name="news"></a>
 - **`Note:`** for the purpose of joining the AI City Challenge Track2 2024, please make sure you fill up the [form](https://docs.google.com/forms/d/e/1FAIpQLSdOVC33d-R23PCuBdSsmo08e-98HiDLykhIIAzryjzjYoilVQ/viewform) from AIC as well.
-  
+
+- **`[2024/01/31]`** updated with the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2.
 - **`[2024/01/22]`** [AI City Challenge 2024 Track2](https://www.aicitychallenge.org/2024-challenge-tracks/) opened.
 - **`[2024/01/22]`** WTS dataset released.
 - **`[2024/01/21]`** WTS dataset [project page](https://woven-visionai.github.io/wts-dataset-homepage/) released.
@@ -239,7 +240,7 @@ Users could feel free to use the multi-view videos in the same scenario folders 
 as well as multi-view videos in `train` for training purposes.
 For `BDD_PC_5K`, each video has its caption GT in `train` and `val`, and validation will be done per video.
 
-Regarding `AI City Challenge 2024 Track2`, the evaluation script will be provided under `evaluation/` soon, notice that only caption annotations will be used for the challenge.
+Regarding `AI City Challenge 2024 Track2`, the evaluation script is provided under `evaluation/`, notice that only caption annotations will be used for the challenge.
 Submission(model output) format is defined as:
 ```
 {
