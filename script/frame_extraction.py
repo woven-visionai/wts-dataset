@@ -10,7 +10,7 @@ def processing(video_path):
 
   while readable:
     cv2.imwrite("frame%d.jpg" % count, image)
-    if fps == 60:
+    if 59 < fps < 61:
       count += 1 
       cv2.imwrite("frame%d.jpg" % count, image)
     readable,image = vidcap.read()
