@@ -198,7 +198,7 @@ def evaluate_one_dataset(predictions_file, ground_truth_dir_path, internal):
     try:
         # Read pred and gt to pred_all and gt_all, which will both look like:
         # {
-        #     "<scenario-name-1>": [  # scenario name
+        #     "<scenario-name-1>": [  # scenario name for multiple view or video file name for single view of BDD_TC_5K
         #         {
         #             "labels": [  # segment number, this is known information will be given
         #                 "0"

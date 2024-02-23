@@ -250,7 +250,85 @@ Regarding `AI City Challenge 2024 Track2`, the evaluation script is provided und
 Submission(model output) format is defined as:
 ```
 {
-    "20230707_12_SN17_T1": [  ##scneario index for multiple view situations OR video name for single view data in "normal_trimmed" and "BDD_PC_5K" folders.
+    "20230707_12_SN17_T1": [  ##scneario index for multiple view situations OR video name for single view of "BDD_PC_5K".
+        {
+            "labels": [  ##segment number, this is known information will be given
+                "4"
+            ],
+            "caption_pedestrian": "",  ##caption regarding pedestrian 
+            "caption_vehicle": ""      ##caption regarding vehicle
+        },
+        {
+            "labels": [
+                "3"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "2"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "1"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+
+        },
+        {
+            "labels": [
+                "0"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle: ""
+        }
+    ]
+
+    "20231013_105827_normal_192.168.0.14_1_event_2": [  ##scneario index for multiple view situations OR video name for single view "BDD_PC_5K".
+        {
+            "labels": [  ##segment number, this is known information will be given
+                "4"
+            ],
+            "caption_pedestrian": "",  ##caption regarding pedestrian 
+            "caption_vehicle": ""      ##caption regarding vehicle
+        },
+        {
+            "labels": [
+                "3"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "2"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+        },
+        {
+            "labels": [
+                "1"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle": ""
+
+        },
+        {
+            "labels": [
+                "0"
+            ],
+            "caption_pedestrian": "",
+            "caption_vehicle: ""
+        }
+    ]
+    
+    "video3334": [  ##scneario index for multiple view situations OR video name for single view "BDD_PC_5K".
         {
             "labels": [  ##segment number, this is known information will be given
                 "4"
