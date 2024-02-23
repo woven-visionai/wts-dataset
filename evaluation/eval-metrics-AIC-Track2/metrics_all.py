@@ -3,23 +3,20 @@
 Evaluate validation set result for the AI City Challenge, Track 2, 2024.
 """
 
-import utils
-
-from argparse import ArgumentParser
+import os
 import glob
 import json
+import utils
+import warnings
 import traceback
 
-
-# Provide path to the ground truth directory that was downloaded.
-# GROUND_TRUTH_DIR_PATH = ""
-# Example using test data:
-GROUND_TRUTH_DIR_PATH = "testdata/gt/"
+from argparse import ArgumentParser
 
 def get_args():
     parser = ArgumentParser(add_help=False, usage=usage_msg())
     parser.add_argument('--help', action='help', help='Show this help message and exit')
-    parser.add_argument("--pred", type=str, help="path to prediction json file")
+    parser.add_argument("--predictions_file", type=str, help="path to predictions file", required=True)
+    parser.add_argument("--ground_truth", type=str, default="labels/gt", help="path to ground truth json files")
 
     return parser.parse_args()
 
@@ -27,9 +24,9 @@ def get_args():
 def usage_msg():
     return """ 
     
-    python3 metrics.py --pred <path_to_prediction_json>
+    python3 metrics_all.py --predictions_file <path_to_predictions_json> --ground_truth <path_to_ground_truth_folder>
 
-    See `python3 metrics.py --help` for more info.
+    See `python3 metrics_all.py --help` for more info.
     
     """
 
@@ -64,7 +61,7 @@ def read_gt(gt_dir_path):
     gt_annotations = {}
 
     # read json files from GT directory and store in a dict
-    for file_path in glob.iglob(gt_dir_path + '**/**.json', recursive=True):
+    for file_path in glob.iglob(gt_dir_path + '/**/**.json', recursive=True):
         # skip vehicle view annotations since their captions are the same as overhead view
         if "vehicle_view" in file_path:
             continue
@@ -144,7 +141,7 @@ def compute_metrics_overall(pred_all, gt_all):
 
     for scenario_name, gt_scenario in gt_all.items():
         if scenario_name not in pred_all:
-            print(f"Scenario {scenario_name} exists in ground-truth but not in predictions."
+            print(f"Scenario {scenario_name} exists in ground-truth but not in predictions. "
                   f"Counting zero score for this scenario.")
             continue
 
@@ -176,13 +173,28 @@ def print_metrics(metrics_dict):
     for metric_name, metric_val in metrics_dict.items():
         print(f"- {metric_name}: {metric_val:.3f}")
 
+# Filter internal or external data.
+# If internal is True, keep internal data.
+# If internal is False, keep external data.
+def filter_internal_or_external_data(data, internal):
+    filtered_data = {}
+    for key, value in data.items():
+        if (internal and key.startswith("2023")) or (not internal and key.startswith("video")):
+            filtered_data[key] = value
 
-if __name__ == '__main__':
-    args = get_args()
-    if not args.pred:
-        print("Please specify --pred flag.")
-        usage()
+    return filtered_data
 
+
+def filter_data_with_video_list(data, video_list):
+    filtered_data = {}
+    for key, value in data.items():
+        if key in video_list:
+            filtered_data[key] = value
+    return filtered_data
+
+
+# Evaluate either internal or external dataset. If video_list is provided, only evaluate on this subset.
+def evaluate_one_dataset(predictions_file, ground_truth_dir_path, internal):
     try:
         # Read pred and gt to pred_all and gt_all, which will both look like:
         # {
@@ -206,20 +218,21 @@ if __name__ == '__main__':
         #         },
         #     ]
         # }
-        pred_all = read_pred(args.pred)
-        gt_all = read_gt(GROUND_TRUTH_DIR_PATH)
+        pred_all = read_pred(predictions_file)
+        gt_all = read_gt(ground_truth_dir_path)
 
-        # Compute overall metrics (summed over all scenarios and segments)
-        metrics_pedestrian_overall, metrics_vehicle_overall, num_segments_overall = compute_metrics_overall(pred_all,
-                                                                                                            gt_all)
-        # Compute average metrics
-        metrics_pedestrian_mean = compute_mean_metrics(metrics_pedestrian_overall, num_segments_overall)
-        metrics_vehicle_mean = compute_mean_metrics(metrics_vehicle_overall, num_segments_overall)
+        # Only evaluate internal or external data at one time
+        pred_all = filter_internal_or_external_data(pred_all, internal)
 
-        print(f"Pedestrian mean score over all data provided:")
-        print_metrics(metrics_pedestrian_mean)
-        print(f"Vehicle mean score over all data provided:")
-        print_metrics(metrics_vehicle_mean)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+
+            # Compute overall metrics (summed over all scenarios and segments)
+            metrics_pedestrian_overall, metrics_vehicle_overall, num_segments_overall = compute_metrics_overall(pred_all,
+                                                                                                                gt_all)
+            # Compute average metrics
+            metrics_pedestrian_mean = compute_mean_metrics(metrics_pedestrian_overall, num_segments_overall)
+            metrics_vehicle_mean = compute_mean_metrics(metrics_vehicle_overall, num_segments_overall)
 
         # Compute average metrics over pedestrian and vehicle
         metrics_all_category_mean = {}
@@ -227,7 +240,6 @@ if __name__ == '__main__':
             veh_score = metrics_vehicle_mean[metric_name]
             metrics_all_category_mean[metric_name] = (ped_score + veh_score) / 2
 
-        # TODO: take avg over 4 metrics after normalizing
         total = 0
         for metric_name, score in metrics_all_category_mean.items():
             if metric_name in ["bleu", "meteor", "rouge-l"]:
@@ -235,10 +247,59 @@ if __name__ == '__main__':
             elif metric_name == "cider":
                 total += score * 10
 
-        final_mean_score = total / 4
+        mean_score = total / 4
 
-        print(f"Final mean score (range [0, 100]):\n{final_mean_score:.2f}")
+        
+        print(f"=== Results for {'internal' if internal else 'external'} videos ===")
+        print(f"Pedestrian mean score over all data provided:")
+        print_metrics(metrics_pedestrian_mean)
+        print(f"Vehicle mean score over all data provided:")
+        print_metrics(metrics_vehicle_mean)
+        print(f"mean score (range [0, 100]): {mean_score:.2f}")
+        print("=="*20)
 
     except Exception as e:
-        print("Error: %s" % repr(e))
+        if mr:
+            print('{"error": "%s"}' % repr(e))
+        else:
+            print("Error: %s" % repr(e))
         traceback.print_exc()
+        exit()
+
+    return metrics_all_category_mean, mean_score
+
+
+
+if __name__ == '__main__':
+    args = get_args()
+
+    gt_internal = f'{args.ground_truth}/annotations'
+    gt_external = f'{args.ground_truth}/external/BDD_PC_5K/annotations'
+    if not os.path.exists(gt_internal) or not os.path.exists(gt_external):
+        if args.mr:
+            print('{"error": "Internal or external ground truth labels missing."}')
+        else:
+            print("Error: Internal or external ground truth labels missing.")
+        exit()
+
+    # evaluate internal videos
+    metrics_all_category_mean_internal, mean_score_internal = evaluate_one_dataset(
+        args.predictions_file,
+        gt_internal,
+        internal=True,
+    )
+    # evaluate external videos
+    metrics_all_category_mean_external, mean_score_external = evaluate_one_dataset(
+        args.predictions_file,
+        gt_external,
+        internal=False,
+    )
+
+    final_score_overall = (mean_score_internal + mean_score_external) / 2
+
+    results = {f'{k}_i':v for k,v in metrics_all_category_mean_internal.items()}
+    results.update({f'{k}_e':v for k,v in metrics_all_category_mean_external.items()})
+    results['s2'] = final_score_overall
+   
+    print("Final mean score: " + str(final_score_overall))
+

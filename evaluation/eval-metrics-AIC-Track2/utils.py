@@ -1,22 +1,29 @@
 import nltk
+from nltk import bleu_score
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score
 from rouge_score import rouge_scorer
 from cider.cider import Cider
+from nltk.tokenize import TreebankWordTokenizer
 
-from pycocoevalcap.tokenizer.ptbtokenizer import PTBTokenizer
 
-ptb_tokenizer = PTBTokenizer()
-nltk.download('punkt')
-nltk.download('wordnet')
+try:
+    nltk.data.find('tokenizers/punkt')
+except:
+    nltk.download('punkt', quiet=True)
+
+try:
+    nltk.data.find('corpus/wordnet')
+except:
+    nltk.download('wordnet', quiet=True)
 
 
 def tokenize_sentence(sentence):
-    sentence = [sentence]
-    sentence = {k: [{'caption': v}] for k, v in enumerate(sentence)}
-
-    tokenized = ptb_tokenizer.tokenize(sentence)[0]
-    return tokenized
+    tokenizer = TreebankWordTokenizer()
+    words = tokenizer.tokenize(sentence)
+    if len(words) == 0:
+        return ""
+    return " ".join(words)
 
 
 # Compute BLEU-4 score on a single sentence
@@ -25,7 +32,9 @@ def compute_bleu_single(tokenized_hypothesis, tokenized_reference):
     tokenized_hypothesis = tokenized_hypothesis.split(" ")
     tokenized_reference = tokenized_reference.split(" ")
 
-    return sentence_bleu([tokenized_reference], tokenized_hypothesis, weights=(0.25, 0.25, 0.25, 0.25))
+    return sentence_bleu([tokenized_reference], tokenized_hypothesis,
+                         weights=(0.25, 0.25, 0.25, 0.25),
+                         smoothing_function=bleu_score.SmoothingFunction().method3)
 
 
 # Compute METEOR score on a single sentence
@@ -55,8 +64,8 @@ def compute_cider_single(sentence_hypothesis, sentence_reference):
 
 # Compute metrics based for a single caption.
 def compute_metrics_single(pred, gt):
-    tokenized_pred = tokenize_sentence(pred)[0]
-    tokenized_gt = tokenize_sentence(gt)[0]
+    tokenized_pred = tokenize_sentence(pred)
+    tokenized_gt = tokenize_sentence(gt)
 
     bleu_score = compute_bleu_single(tokenized_pred, tokenized_gt)
     meteor_score = compute_meteor_single(tokenized_pred, tokenized_gt)
