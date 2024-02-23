@@ -21,6 +21,12 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ### News <a name="news"></a>
 - **`Note:`** for the purpose of joining the AI City Challenge Track2 2024, please make sure you fill up the [form](https://docs.google.com/forms/d/e/1FAIpQLSdOVC33d-R23PCuBdSsmo08e-98HiDLykhIIAzryjzjYoilVQ/viewform) from AIC as well.
 
+- **`[2024/02/23]`** updated the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2 evaluatin system submission.
+
+- **`[2024/02/22]`** AIC challenge Track2 Test data released and [evaluation](https://www.aicitychallenge.org/2024-evaluation-system/) is open !
+
+- **`[2024/02/22]`** BBox of whole train/val of dataset are updated! Please download it from privided dropbox or google drive link to your email.
+
 - **`[2024/01/31]`** updated with the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2.
 - **`[2024/01/22]`** [AI City Challenge 2024 Track2](https://www.aicitychallenge.org/2024-challenge-tracks/) opened.
 - **`[2024/01/22]`** WTS dataset released.
@@ -29,9 +35,9 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ### Update List <a name="update"></a>
 
 - [x] List of views used as main reference during annotation. (2024/01/23)
-- [ ] First frame annotated bbox for each segment. (70% provided)
-- [ ] Generated bbox for target pedesrian and vehicle.
-- [x] Evaluation code.
+- [x] First frame annotated bbox for each segment. (2024/02/22)
+- [x] Generated bbox for target pedesrian and vehicle. (2024/02/22)
+- [x] Evaluation code. (2024/02/23)
 - [ ] 3D Gaze annotation release.
 - [ ] Dataset arXiv paper. 
 
