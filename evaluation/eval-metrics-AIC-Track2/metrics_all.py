@@ -143,6 +143,8 @@ def compute_metrics_overall(pred_all, gt_all):
         if scenario_name not in pred_all:
             print(f"Scenario {scenario_name} exists in ground-truth but not in predictions. "
                   f"Counting zero score for this scenario.")
+            num_segments = len(gt_scenario)
+            num_segments_overall += num_segments
             continue
 
         pred_scenario = pred_all[scenario_name]
