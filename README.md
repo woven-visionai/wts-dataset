@@ -363,13 +363,15 @@ Submission(model output) format is defined as:
                 "0"
             ],
             "caption_pedestrian": "",
-            "caption_vehicle: ""
+            "caption_vehicle": ""
         }
     ]
 }
 ```
 
-Notice that please submit one JSON covered everthing.
+Note:
+1. Please submit one JSON file that includes results for ALL videos in the test set. Otherwise, you will get warning saying counting zero score for missing videos.
+2. In your submissin, please make sure all video segments that the dataset annotation specified have both "caption_pedestrian" an "caption_vehicle" keys existing. Otherwise, you will get KeyError saying the key is not found.
 
 ## Annotation Manner <a name="licenseandcitation"></a>
 
