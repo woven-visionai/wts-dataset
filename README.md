@@ -379,4 +379,11 @@ will be updated with the arXiv paper soon.
 
 ## License and Citation <a name="licenseandcitation"></a>
 
-will update the citation with arXiv paper and please refer to license here.[project page](https://woven-visionai.github.io/wts-dataset-homepage/)
+```BibTeX
+@article{WTS2024,
+title = {WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding},
+author = {Quan Kong and Yuki Kawana and Rajat Saini and Ashutosh Kumar and Jingjing Pan and Ta Gu and Yohei Ozao and Balazs Opra and David C. Anastasiu and Yoichi Sato and Norimasa Kobori},
+year = {2024},
+url = {https://github.com/woven-visionai/wts-dataset}
+}
+```
