@@ -380,6 +380,7 @@ will be updated with the arXiv paper soon.
 ## License and Citation <a name="licenseandcitation"></a>
 Please refer to our license from WTS dataset [homepage](https://woven-visionai.github.io/wts-dataset-homepage/)
 
+Please consider citing our project if you find WTS dataset is helpful for your works.
 ```BibTeX
 @article{WTS2024,
 title = {WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding},
