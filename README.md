@@ -378,6 +378,7 @@ Note:
 will be updated with the arXiv paper soon.
 
 ## License and Citation <a name="licenseandcitation"></a>
+Please refer to our license from WTS dataset [homepage(https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2)]
 
 ```BibTeX
 @article{WTS2024,
