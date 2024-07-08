@@ -104,6 +104,7 @@ external/
 Two kinds of annotations now are available. 
 - BBox for the target pedestrian and vehicle.
 - Description for the traffic scenario focuses on the `location, attention, behavior, context` regarding the pedestrian and vehicle.
+- 3D Gaze of the pedestrian
 
 Will update the 3D Gaze and Location annotations for use (stay tuned).
 
@@ -216,6 +217,44 @@ external/
     │   │   ├── video1009_caption.json
     │   │   ├── video100_caption.json
     │   │   ├── video1015_caption.json
+...
+```
+
+3D Gaze is also provided for each camera for a given dates and the structure is shown below:
+
+```
+annotations
+├── 3D_gaze
+│   ├── pedestrian  ## 3D gaze is only provided for the pedestrian
+│   │   ├── train
+│   │   │   ├── 20230922_1_SN2_T1
+│   │   │   │   └── overhead_view
+│   │   │   │       ├── 20230922_1_SN2_T1_192.168.0.11-1_gaze.json  ## Gaze per camera video 
+│   │   │   │       ├── 20230922_1_SN2_T1_192.168.0.12-2_gaze.json
+│   │   │   │       └── 20230922_1_SN2_T1_192.168.0.28-3_gaze.json
+...
+```
+Gaze annotation follows the similar structure as BBox, as shown below. The gaze (x, y, z) is in overhead camera coordinates in OpenGL axis convention (x to the right, y up, and z backward). `image_id` refers to the frame number in the overhead video.
+
+```
+{
+    "annotations": [
+        {
+            "image_id": 0, ## frame ID
+            "gaze": [
+                0.7267333451506679, ## x
+                0.27087537465994793, ## y
+                -0.6312568142259175 ## z
+            ],
+        },
+        {
+            "image_id": 1,
+            "gaze": [
+                0.7267333451506679,
+                0.27087537465994793,
+                -0.6312568142259175
+            ],
+        },
 ...
 ```
 
