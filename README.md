@@ -19,9 +19,9 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
-- **`[2024/07/17]:`**3D Gaze annotation is released! Please download it from our previously provided annotations in dropbox or google drive link 
+- **`[2024/07/17]`** 3D Gaze annotation is released! It is available in the previously provided annotations in dropbox or google drive link (keep updating more). 
 
-- **`[2024/06/30]:`**AI City Challenge 2024 is finished this year! Please directly require the WTS dataset from this [form](https://docs.google.com/forms/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform)
+- **`[2024/06/30]`** AI City Challenge 2024 is finished this year! Please directly require the WTS dataset from this [form](https://docs.google.com/forms/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform)
 
 - **`[2024/02/23]`** updated the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2 evaluatin system submission.
 
@@ -40,7 +40,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 - [x] First frame annotated bbox for each segment. (2024/02/22)
 - [x] Generated bbox for target pedesrian and vehicle. (2024/02/22)
 - [x] Evaluation code. (2024/02/23)
-- [ ] 3D Gaze annotation release.
+- [x] 3D Gaze annotation release.
 - [ ] Dataset arXiv paper. 
 
 ## WTS Dataset <a name="introduction"></a>
