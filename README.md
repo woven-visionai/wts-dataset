@@ -40,7 +40,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 - [x] First frame annotated bbox for each segment. (2024/02/22)
 - [x] Generated bbox for target pedesrian and vehicle. (2024/02/22)
 - [x] Evaluation code. (2024/02/23)
-- [x] 3D Gaze annotation release.
+- [x] 3D Gaze annotation release. (2024/07/18)
 - [ ] Dataset arXiv paper. 
 
 ## WTS Dataset <a name="introduction"></a>
