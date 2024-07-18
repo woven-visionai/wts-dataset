@@ -19,13 +19,15 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
-- **`Note:`** for the purpose of joining the AI City Challenge Track2 2024, please make sure you fill up the [form](https://docs.google.com/forms/d/e/1FAIpQLSdOVC33d-R23PCuBdSsmo08e-98HiDLykhIIAzryjzjYoilVQ/viewform) from AIC as well.
+- **`[2024/07/17]:`**3D Gaze annotation is released! Please download it from our previously provided annotations in dropbox or google drive link 
+
+- **`[2024/06/30]:`**AI City Challenge 2024 is finished this year! Please directly require the WTS dataset from this [form](https://docs.google.com/forms/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform)
 
 - **`[2024/02/23]`** updated the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2 evaluatin system submission.
 
 - **`[2024/02/22]`** AIC challenge Track2 Test data released and [evaluation](https://www.aicitychallenge.org/2024-evaluation-system/) is open !
 
-- **`[2024/02/22]`** BBox of whole train/val of dataset are updated! Please download it from privided dropbox or google drive link to your email.
+- **`[2024/02/22]`** BBox of whole train/val of dataset are updated! Please download it from provided dropbox or google drive link to your email.
 
 - **`[2024/01/31]`** updated with the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2.
 - **`[2024/01/22]`** [AI City Challenge 2024 Track2](https://www.aicitychallenge.org/2024-challenge-tracks/) opened.
@@ -225,13 +227,11 @@ external/
 ```
 annotations
 ├── 3D_gaze
-│   ├── pedestrian  ## 3D gaze is only provided for the pedestrian
-│   │   ├── train
-│   │   │   ├── 20230922_1_SN2_T1
-│   │   │   │   └── overhead_view
-│   │   │   │       ├── 20230922_1_SN2_T1_192.168.0.11-1_gaze.json  ## Gaze per camera video 
-│   │   │   │       ├── 20230922_1_SN2_T1_192.168.0.12-2_gaze.json
-│   │   │   │       └── 20230922_1_SN2_T1_192.168.0.28-3_gaze.json
+│   ├── train
+│   │   ├── 20230922_1_SN2_T1
+│   │   │   ├── 20230922_1_SN2_T1_192.168.0.11-1_gaze.json  ## Gaze per camera video 
+│   │   │   ├── 20230922_1_SN2_T1_192.168.0.12-2_gaze.json
+│   │   │   └── 20230922_1_SN2_T1_192.168.0.28-3_gaze.json
 ...
 ```
 Gaze annotation follows the similar structure as BBox, as shown below. The gaze (x, y, z) is in overhead camera coordinates in OpenGL axis convention (x to the right, y up, and z backward). `image_id` refers to the frame number in the overhead video.
