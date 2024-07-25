@@ -19,6 +19,8 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
+- **`[2024/07/25]`** WTS dataset is accepted by ECCV24! Updated arXiv [paper](https://arxiv.org/abs/2407.15350)! 
+
 - **`[2024/07/17]`** 3D Gaze annotation is released! It is available in the previously provided annotations in dropbox or google drive link (keep updating more). 
 
 - **`[2024/06/30]`** AI City Challenge 2024 is finished this year! Please directly require the WTS dataset from this [form](https://docs.google.com/forms/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform)
@@ -41,7 +43,7 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 - [x] Generated bbox for target pedesrian and vehicle. (2024/02/22)
 - [x] Evaluation code. (2024/02/23)
 - [x] 3D Gaze annotation release. (2024/07/17)
-- [ ] Dataset arXiv paper. 
+- [x] Dataset arXiv paper. 
 
 ## WTS Dataset <a name="introduction"></a>
 
@@ -419,12 +421,15 @@ will be updated with the arXiv paper soon.
 ## License and Citation <a name="licenseandcitation"></a>
 Please refer to our license from WTS dataset [homepage](https://woven-visionai.github.io/wts-dataset-homepage/)
 
-Please consider citing our project if you find WTS dataset is helpful for your works.
+Please consider citing our paper if you find WTS dataset is helpful for your works.
 ```BibTeX
-@article{WTS2024,
-title = {WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding},
-author = {Quan Kong and Yuki Kawana and Rajat Saini and Ashutosh Kumar and Jingjing Pan and Ta Gu and Yohei Ozao and Balazs Opra and David C. Anastasiu and Yoichi Sato and Norimasa Kobori},
-year = {2024},
-url = {https://github.com/woven-visionai/wts-dataset}
+@misc{kong2024wtspedestriancentrictrafficvideo,
+      title={WTS: A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding}, 
+      author={Quan Kong and Yuki Kawana and Rajat Saini and Ashutosh Kumar and Jingjing Pan and Ta Gu and Yohei Ozao and Balazs Opra and David C. Anastasiu and Yoichi Sato and Norimasa Kobori},
+      year={2024},
+      eprint={2407.15350},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2407.15350}, 
 }
 ```
