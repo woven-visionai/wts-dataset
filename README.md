@@ -276,13 +276,13 @@ annotations
 
 Head annotation also follows the similar structure as BBox, as shown below. The head `(x, y)` is in image coordinates (absolute pixel values). `image_id` refers to the frame number in the overhead video.
 
-```json
+```
 {
     "annotations": [
         {
             "image_id": 0,   ## frame ID
             "head": [
-                32.5444,  ## x
+                32.5444, 
                 16.9874   ## y
             ]
         },
