@@ -224,7 +224,7 @@ external/
 ...
 ```
 
-3D Gaze is also provided for each camera for a given dates and the structure is shown below:
+3D Gaze is also provided for each camera for given dates and the structure is shown below:
 
 ```
 annotations
@@ -260,7 +260,7 @@ Gaze annotation follows the similar structure as BBox, as shown below. The gaze 
 ...
 ```
 
-Head position is provided for each camera for a given dates and the structure is shown below:
+Head position is provided for each camera for given dates and the structure is shown below:
 ```
 annotations
 ├── head
@@ -282,7 +282,7 @@ Head annotation also follows the similar structure as BBox, as shown below. The 
         {
             "image_id": 0,   ## frame ID
             "head": [
-                32.5444, 
+                32.5444,  ## x
                 16.9874   ## y
             ]
         },
