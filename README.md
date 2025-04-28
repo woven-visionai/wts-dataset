@@ -260,6 +260,45 @@ Gaze annotation follows the similar structure as BBox, as shown below. The gaze 
 ...
 ```
 
+Head position is provided for each camera for a given dates and the structure is shown below:
+```
+annotations
+├── head
+│   └── train
+│       ├── 20230922_1_SN2_T1
+│       │   ├── 20230922_1_SN2_T1_192.168.0.11-1_head.json  ## Head per camera video  
+│       │   ├── 20230922_1_SN2_T1_192.168.0.12-2_head.json  
+│       │   └── 20230922_1_SN2_T1_192.168.0.28-3_head.json  
+│       └── 20230920_2_SN_T3
+│           └── 20230920_2_SN_T3_192.168.0.10-1_head.json  
+...
+```
+
+Head annotation also follows the similar structure as BBox, as shown below. The head `(x, y)` is in image coordinates (absolute pixel values). `image_id` refers to the frame number in the overhead video.
+
+```json
+{
+    "annotations": [
+        {
+            "image_id": 0,   ## frame ID
+            "head": [
+                32.5444,  ## x
+                16.9874   ## y
+            ]
+        },
+        {
+            "image_id": 1,
+            "head": [
+                65.4982,
+                76.9873
+            ]
+        },
+        ...
+    ]
+}
+```
+
+
 ## Data Preparation
 
 - Our BBox annotation is frame-based, you could use the below script to extract the frame to align the ID in our annotations.
