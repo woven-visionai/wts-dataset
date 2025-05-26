@@ -105,14 +105,15 @@ external/
 
 **Annotation**
 
-Two kinds of annotations now are available. 
+Four kinds of annotations now are available. 
 - BBox for the target pedestrian and vehicle.
 - Description for the traffic scenario focuses on the `location, attention, behavior, context` regarding the pedestrian and vehicle.
 - 3D Gaze of the pedestrian
+- Visual Question Answer
 
 Will update the 3D Gaze and Location annotations for use (stay tuned).
 
-Notice that the videos from overhead and vehicle in the same scneario index folder will share the same caption.
+Notice that the videos from overhead and vehicle in the same scenario index folder will share the same caption.
 ```
 annotations
 ├──caption/
@@ -298,6 +299,87 @@ Head annotation also follows the similar structure as BBox, as shown below. The 
 }
 ```
 
+Visual Question Answer are provided for each scenario
+
+```
+annotations
+├── vqa
+│   └── train
+│   │   ├── 20230707_8_SN46_T1
+│   │   │   ├── environment ## contains QA about environment
+│   │   │   │      ├── 20230707_8_SN46_T1.json  
+│   │   │   └── overhead_view ## contains QA about overhead view
+│   │   │   │      ├── 20230707_8_SN46_T1.json  
+│   │   │   └── vehicle_view ## contains QA about vehicle view
+│   │   │   │      ├── 20230707_8_SN46_T1.json
+│   │   ├── 
+...
+│   └── val
+│   │   ├── 20230707_9_SN1_T1
+│   │   │   ├── environment 
+│   │   │   │      ├── 20230707_9_SN1_T1.json  
+│   │   │   └── overhead_view
+│   │   │   │      ├── 20230707_9_SN1_T1.json  
+│   │   │   └── vehicle_view
+│   │   │   │      ├── 20230707_9_SN1_T1.json
+```
+
+VQA follows the following format
+
+QA for environment follows the format:
+
+```
+[
+    {
+        "id": 722,
+        "overhead_videos": [
+            "20230707_8_SN46_T1_Camera1_0.mp4",
+            "20230707_8_SN46_T1_Camera2_1.mp4",
+            "20230707_8_SN46_T1_Camera2_2.mp4",
+            "20230707_8_SN46_T1_Camera3_3.mp4"
+        ],
+        "environment": [
+            {
+                "question": "What is the road inclination in the scene?",
+                "a": "Steep downhill",
+                "b": "Level",
+                "c": "Gentle downhill",
+                "d": "Steep uphill",
+                "correct": "b"
+            },
+            ...
+```
+
+QA for overhead/vehicle QA follows the format:
+
+```
+[
+    {
+        "id": 722,
+        "overhead_videos": [
+            "20230707_8_SN46_T1_Camera1_0.mp4",
+            "20230707_8_SN46_T1_Camera2_1.mp4",
+            "20230707_8_SN46_T1_Camera2_2.mp4",
+            "20230707_8_SN46_T1_Camera3_3.mp4"
+        ],
+        "event_phase": [
+            {
+                "start_time": "39.395",
+                "end_time": "44.663",
+                "labels": [
+                    "avoidance"
+                ],
+                "conversations": [
+                    {
+                        "question": "What is the orientation of the pedestrian's body?",
+                        "a": "Same direction as the vehicle",
+                        "b": "Diagonally to the left, in the opposite direction to the vehicle",
+                        "c": "Perpendicular to the vehicle and to the right",
+                        "d": "Diagonally to the right, in the same direction as the vehicle",
+                        "correct": "c"
+                    },
+```
+
 
 ## Data Preparation
 
@@ -330,7 +412,7 @@ Regarding `AI City Challenge 2024 Track2`, the evaluation script is provided und
 Submission(model output) format is defined as:
 ```
 {
-    "20230707_12_SN17_T1": [  ##scneario index for multiple view situations OR video name for single view of "BDD_PC_5K".
+    "20230707_12_SN17_T1": [  ##scenario index for multiple view situations OR video name for single view of "BDD_PC_5K".
         {
             "labels": [  ##segment number, this is known information will be given
                 "4"
@@ -369,7 +451,7 @@ Submission(model output) format is defined as:
         }
     ]
 
-    "20231013_105827_normal_192.168.0.14_1_event_2": [  ##scneario index for multiple view situations OR video name for single view "BDD_PC_5K".
+    "20231013_105827_normal_192.168.0.14_1_event_2": [  ##scenario index for multiple view situations OR video name for single view "BDD_PC_5K".
         {
             "labels": [  ##segment number, this is known information will be given
                 "4"
@@ -408,7 +490,7 @@ Submission(model output) format is defined as:
         }
     ]
     
-    "video3334": [  ##scneario index for multiple view situations OR video name for single view "BDD_PC_5K".
+    "video3334": [  ##scenario index for multiple view situations OR video name for single view "BDD_PC_5K".
         {
             "labels": [  ##segment number, this is known information will be given
                 "4"
