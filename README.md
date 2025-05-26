@@ -19,6 +19,8 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
+- **`[2025/05/26]`** 3D Gaze and VQA is added to WTS dataset.
+
 - **`[2024/07/25]`** WTS dataset is accepted by ECCV24! Updated arXiv [paper](https://arxiv.org/abs/2407.15350)! 
 
 - **`[2024/07/17]`** 3D Gaze annotation is released! It is available in the previously provided annotations in dropbox or google drive link (keep updating more). 
