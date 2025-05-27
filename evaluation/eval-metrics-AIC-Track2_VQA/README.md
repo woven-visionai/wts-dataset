@@ -1,7 +1,7 @@
 Evaluation Script
 ===================
 
-Evaluate validation set result for the AI City Challenge, Track 2.
+Evaluate test set results for the AI City Challenge, Track 2.
 
 ## Description ##
 This repository provides Python 3 support to evaluate Visual question Answers.
