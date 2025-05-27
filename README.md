@@ -6,7 +6,7 @@
 
 **WTS:A Pedestrian-Centric Traffic Video Dataset for Fine-grained Spatial-Temporal Understanding**
 
-Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) (serves as official source for [`AI City Challenge 2024 Track2 @ CVPR2024`](https://www.aicitychallenge.org/2024-challenge-tracks/))
+Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) (serves as official source for [`AI City Challenge Track2`](https://www.aicitychallenge.org/2024-challenge-tracks/))
 </div>
 
 <div id="top" align="center">
@@ -400,7 +400,7 @@ We provide a list of which camera views are mainly used as a reference during th
 20230707_9_SN1_T1,20230707_9_SN1_T1_Camera2_1.mp4,20230707_9_SN1_T1_Camera2_2.mp4
 ```
 
-## Evaluation
+## Evaluation Captioning Task
 
 We provide the validation set for the video2text task with a given segment duration.
 Video and its GT of the validation set are stored following the same structure as `train` under `val` folders.
@@ -410,7 +410,7 @@ Users could feel free to use the multi-view videos in the same scenario folders 
 as well as multi-view videos in `train` for training purposes.
 For `BDD_PC_5K`, each video has its caption GT in `train` and `val`, and validation will be done per video.
 
-Regarding `AI City Challenge 2024 Track2`, the evaluation script is provided under `evaluation/`, notice that only caption annotations will be used for the challenge.
+Regarding `AI City Challenge Track2`, the evaluation script is provided under `evaluation/eval-metrics-AIC-Track2/`, notice that only caption annotations will be used for the challenge.
 Submission(model output) format is defined as:
 ```
 {
@@ -535,7 +535,33 @@ Submission(model output) format is defined as:
 
 Note:
 1. Please submit one JSON file that includes results for ALL videos in the test set. Otherwise, you will get warning saying counting zero score for missing videos.
-2. In your submissin, please make sure all video segments that the dataset annotation specified have both "caption_pedestrian" an "caption_vehicle" keys existing. Otherwise, you will get KeyError saying the key is not found.
+2. In your submission, please make sure all video segments that the dataset annotation specified have both "caption_pedestrian" an "caption_vehicle" keys existing. Otherwise, you will get KeyError saying the key is not found.
+
+
+## Evaluation Visual Question Answering Task
+
+The evaluation script for VQA task is located here: 
+```
+evaluation/eval-metrics-AIC-Track2_VQA/traffic_qa_evaluation_script.py
+```
+
+The evaluation script expects the following format:
+```
+[
+  {
+    "id": "3c8c80e3-33f1-4133-a86c-1192c8a26159",
+    "correct": "a"
+  },
+  ...
+  
+  where id is the question id in test set and correct is the predicted option label.
+```
+
+Refer ` https://github.com/woven-visionai/wts-dataset/blob/main/evaluation/eval-metrics-AIC-Track2_VQA/README.md ` for more details.
+
+Note:
+1. Missing predictions for QAs are counted as zero score.
+
 
 ## Annotation Manner <a name="licenseandcitation"></a>
 
