@@ -557,7 +557,7 @@ The evaluation script expects the following format:
   where id is the question id in test set and correct is the predicted option label.
 ```
 
-Refer ` https://github.com/woven-visionai/wts-dataset/blob/main/evaluation/eval-metrics-AIC-Track2_VQA/README.md ` for more details.
+Refer [this](https://github.com/woven-visionai/wts-dataset/blob/main/evaluation/eval-metrics-AIC-Track2_VQA/README.md) for more details.
 
 Note:
 1. Missing predictions for QAs are counted as zero score.
