@@ -156,6 +156,70 @@ Head annotation also follows the similar structure as BBox, as shown below. The 
 }
 ```
 
+## How to visualize?
+
+### Requirements
+
+* Python 3.x
+* [OpenCV](https://opencv.org/) (cv2)
+* [NumPy](https://numpy.org/)
+
+### Directory Layout
+
+```text
+root/
+├── annotations/
+│   ├── 3D_gaze/          # prepared 3D gaze vectors (camera extrinsics already applied)
+│   ├── bbox_annotated/   
+│   ├── bbox_generated/   
+│   ├── caption/          
+│   ├── head/             
+│   └── vqa/              
+├── camera_intrinsics/    # per-camera intrinsics
+├── camera_extrinsics/    
+└── visualize_gaze.py     # main visualization script
+```
+
+---
+
+### Usage
+
+Run the script **from the project root**:
+
+```bash
+python visualize_gaze.py <SCENE_ID> --split <SPLIT_TYPE>
+```
+
+Example:
+
+```bash
+python visualize_gaze.py 20230922_16_CN5_T1 --split train
+```
+
+*If the video or annotations for a scene are missing, the script will automatically skip that scene.*
+
+#### Optional flags
+
+| Flag | Effect |
+|------|--------|
+| `--show-head-dot` | Draw the head position as a green dot |
+| `--fixed-arrow-length` | Render gaze arrows with a constant length † |
+
+† `--fixed-arrow-length` can be combined with `--show-head-dot`, e.g.:
+
+```bash
+python visualize_gaze.py 20230922_16_CN5_T1 \
+       --split train \
+       --show-head-dot \
+       --fixed-arrow-length
+```
+
+---
+
+## Output
+
+* Videos are written to the `visualizations/` directory in **MP4** format.
+
 ## Visualization Examples
 
 Below are short GIFs showing how our gaze output looks:
@@ -163,6 +227,4 @@ Below are short GIFs showing how our gaze output looks:
 ![Gaze Heatmap Example](../assets/images/sample_gaze1.gif)
 
 ![Gaze Heatmap Example](../assets/images/sample_gaze2.gif)
-
-![Gaze Heatmap Example](../assets/images/sample_gaze3.gif)
 
