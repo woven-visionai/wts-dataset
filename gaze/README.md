@@ -131,17 +131,24 @@ Head annotation also follows the similar structure as BBox, as shown below. The 
 {
     "annotations": [
         {
-            "image_id": 0,   ## frame ID
+            "image_id": 900,
             "head": [
-                32.5444,  ## x
-                16.9874   ## y
+                124.51485148514843,
+                427.84158415841586
             ]
         },
         {
-            "image_id": 1,
+            "image_id": 901,
             "head": [
-                65.4982,
-                76.9873
+                124.51485148514844,
+                427.84158415841586
+            ]
+        },
+        {
+            "image_id": 902,
+            "head": [
+                134.01980198019797,
+                425.94059405940607
             ]
         },
         ...
