@@ -112,7 +112,7 @@ Above forms our WTS dataset.
 ## Dataset File Structure
 To help you navigate through the downloaded files, here we list the **folder link of each part** of data.
 
-### Train/val split
+### Train/Val Split
   - Internal dataset
     - [Video](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
     - [Caption](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
@@ -128,7 +128,7 @@ To help you navigate through the downloaded files, here we list the **folder lin
     - [VQA, Caption, and Bbox](https://drive.google.com/file/d/1rzExQcjkuV3_C4WtDBRWHBwBiRnBzxtO/view?usp=drive_link)
 
 
-### Public Test split
+### Public Test Split
 - For both internal & external datasets:
   - [Videos and phase start/end timestamps](https://drive.google.com/file/d/1f32teoQ4OWLCe7AHisHvkTH3woQ3x768/view?usp=drive_link)
   - [Bbox](https://drive.google.com/file/d/1y8BANRcuf1wgHS7DvNwae0HhXjjrem0E/view?usp=drive_link)
