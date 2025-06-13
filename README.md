@@ -105,7 +105,7 @@ Above forms our WTS dataset.
 
 
 ## Dataset File Structure
-To help you navigate through the downloaded files, here we list the **folder link of each part **of data.
+To help you navigate through the downloaded files, here we list the **folder link of each part** of data.
 
 ### Train/val split
   - Internal dataset
