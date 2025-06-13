@@ -61,7 +61,60 @@ WTS provides the largest number of videos with long fine-grained video descripti
   <img src="assets/images/comparison.png" width="800">
 </p>
 
-## Dataset Structure <a name="datastructure"></a>
+# Dataset Download
+
+1. Please submit request through [Google Form](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) first.
+2. You will get a DropBox link and a Google Drive link. They have identical content, so you can choose either one.
+3. For the Google Drive, in case you do not have access, request on Google Drive and it will be approved manually as long as you have done Step 1.
+
+# Dataset File Structure 
+
+As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
+1. Internal dataset: the dataset where we filmed and collected from scratch
+2. External dataset: videos originate form the BDD dataset
+Internal and external dataset are mixed to form our WTS dataset.
+
+This challenge consists of 2 tracks:
+- Captioning task
+- VQA task
+So we have provided the videos, captions, and VQA ground truth for the train/val split.
+
+Additionally, we provide metadata at our best effort:
+- Bbox (of the pedestrian and the vehicle)
+- 3D Gaze of the pedestrian
+
+Above forms our WTS dataset.
+
+To help you navigate through the downloaded files, here we list the folder link of each part of data.
+
+- Train/val split
+  - Internal dataset
+    - Videos: [Google Drive link](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
+    - Captions: [Google Drive link](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
+    - VQA: [Google Drive link](https://drive.google.com/file/d/1qejf0VO33v-Rm-8X4-leKclgakoLJY1w/view?usp=drive_link)
+    - Bbox:
+      - bbox_annotated (i.e. human annotations of the first frame of each phase only) [Google Drive link](https://drive.google.com/file/d/1HLmzMapqRJLyM5Ema5oWrJBktZ2iGbLa/view?usp=drive_link)
+      - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything) [Google Drive link](https://drive.google.com/file/d/1PJZlgluyxCjgkrfVTnXK24FupDYEEyB0/view?usp=drive_link)
+    - 3D gaze: [Google Drive link](https://drive.google.com/file/d/1744aqEwUuOFGyCVHNtthsAZtHf7ekEbG/view?usp=drive_link)
+    - Head: [Google Drive link](https://drive.google.com/file/d/1tX1LGONFvkgFLWWUX31eyN6YkhpK-1nW/view?usp=drive_link)
+  - External dataset
+    - Videos: [Google Drive link]()
+    - Captions: [Google Drive link]()
+    - VQA: [Google Drive link]()
+    - Bbox: [Google Drive link]()
+    - 3D gaze: [Google Drive link]()
+    - Head: [Google Drive link]()
+   
+
+    - Videos: [Google Drive link]()
+    - Captions: [Google Drive link]()
+    - VQA: [Google Drive link]()
+    - Bbox: [Google Drive link]()
+    - 3D gaze: [Google Drive link]()
+
+
+
+## Dataset Format and Content <a name="datastructure"></a>
 we have two kinds of video data provided for use:
 - Collected real-world WTS data including traffic accidents.
 - Filtered pedestrian-centric videos from [BDD100K](https://www.vis.xyz/bdd100k/) data with our WTS annotations as `BDD_PC_5K`
