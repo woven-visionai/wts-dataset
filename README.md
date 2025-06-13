@@ -566,7 +566,7 @@ Note:
 
 ## Annotation Manner <a name="licenseandcitation"></a>
 
-Our annotation pipeline.
+Our annotation pipeline:
 <img width="896" alt="image" src="https://github.com/user-attachments/assets/63fa5f89-662c-455c-ac6a-9f06223d009c" />
 
 
