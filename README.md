@@ -98,8 +98,10 @@ Additionally, we provide additional **metadata** at our best effort:
   - We provide 2 variations:
     - bbox_annotated (i.e. human annotations of the first frame of each phase only)
     - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything)
-- 3D Gaze and 2D head position of the pedestrian
-It's **optional** for you to utilize these additional metadata for your algorithm.
+- 3D Gaze and 2D head position of the pedestrian.
+
+
+Note: It's **optional** for you to utilize these additional metadata for your algorithm.
 
 <p>&nbsp;</p>
 
