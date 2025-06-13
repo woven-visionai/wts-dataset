@@ -72,10 +72,12 @@ WTS provides the largest number of videos with long fine-grained video descripti
 
 ### Internal and External Datasets
 As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
-1. Internal dataset:
+1. **Internal dataset:**
+
 Real-world WTS data including traffic accidents. We collected them **from scratch**.
 
-2. External dataset:
+2. **External dataset:**
+
 Based on [BDD100K](https://www.vis.xyz/bdd100k/) data, we filtered out pedestrian-centric videos. We call it `BDD_PC_5K`.
 
 
