@@ -70,6 +70,7 @@ WTS provides the largest number of videos with long fine-grained video descripti
 
 ## Dataset Overview
 
+### Internal and External Datasets
 As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
 1. Internal dataset:
 Real-world WTS data including traffic accidents. We collected them from scratch.
@@ -77,8 +78,8 @@ Real-world WTS data including traffic accidents. We collected them from scratch.
 2. External dataset:
 Based on [BDD100K](https://www.vis.xyz/bdd100k/) data, we filtered out pedestrian-centric videos. We call it `BDD_PC_5K`.
 
-<p>&nbsp;</p>
 
+### Caption and VQA
 This challenge consists of **2 tasks**:
 - Captioning task
 - VQA task
@@ -88,8 +89,8 @@ Therefore, for the **train/val split**, we provide these data:
 - Ground-truth **captions**
 - Ground-truth **VQA**
 
-<p>&nbsp;</p>
 
+### Additional metadata
 Additionally, we provide additional **metadata** at our best effort:
 - Bbox (of the target pedestrian and the vehicle)
   - We provide 2 variations:
