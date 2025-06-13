@@ -85,23 +85,23 @@ This challenge consists of **2 tasks**:
 
 Therefore, for the **train/val split**, we provide these data:
 - Videos
-- Ground-truth captions
-- Ground-truth VQA data
+- Ground-truth **captions**
+- Ground-truth **VQA**
 
 <p>&nbsp;</p>
 
-Additionally, we provide **metadata** at our best effort:
+Additionally, we provide additional **metadata** at our best effort:
 - Bbox (of the target pedestrian and the vehicle)
   - We provide 2 variations:
     - bbox_annotated (i.e. human annotations of the first frame of each phase only)
     - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything)
 - 3D Gaze and 2D head position of the pedestrian
+It's **optional** for you to utilize these additional metadata for your algorithm.
 
 <p>&nbsp;</p>
 
 Above forms our WTS dataset.
 
-Notice that the videos from overhead and vehicle in the same scenario index folder will share the same caption.
 
 ## Dataset File Structure
 To help you navigate through the downloaded files, here we list the **folder link of each part **of data.
@@ -173,6 +173,8 @@ external/
 ## Annotations
 
 ### Caption
+
+Note that the videos from overhead_view and vehicle_view in the same scenario folder will share the same caption.
 
 ```
 annotations
