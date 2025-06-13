@@ -19,17 +19,17 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
-- **`[2025/05/26]`** 3D Gaze and VQA is added to WTS dataset.
+- **`[2025/06/13]`** All data (including videos, captions, VQA, 3D gaze, and bbox) are up-to-date.
 
+- **`[2025/05/21]`** AIC challenge Track2 Test data for ICCV 2025 is released and [evaluation](https://eval.aicitychallenge.org/aicity2025/login) is open!
+  
 - **`[2024/07/25]`** WTS dataset is accepted by ECCV24! Updated arXiv [paper](https://arxiv.org/abs/2407.15350)! 
-
-- **`[2024/07/17]`** 3D Gaze annotation is released! It is available in the previously provided annotations in dropbox or google drive link (keep updating more). 
 
 - **`[2024/06/30]`** AI City Challenge 2024 is finished this year! Please directly require the WTS dataset from this [form](https://docs.google.com/forms/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform)
 
-- **`[2024/02/23]`** updated the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2 evaluatin system submission.
+- **`[2024/02/23]`** Updated the [evaluation script](https://github.com/woven-visionai/wts-dataset/tree/main/evaluation/eval-metrics-AIC-Track2) for AIC Track2 evaluatin system submission.
 
-- **`[2024/02/22]`** AIC challenge Track2 Test data released and [evaluation](https://www.aicitychallenge.org/2024-evaluation-system/) is open !
+- **`[2024/02/22]`** AIC challenge Track2 Test data for ECCV 2024 is released and [evaluation](https://www.aicitychallenge.org/2024-evaluation-system/) is open !
 
 - **`[2024/02/22]`** BBox of whole train/val of dataset are updated! Please download it from provided dropbox or google drive link to your email.
 
