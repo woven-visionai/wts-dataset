@@ -19,9 +19,9 @@ Dataset download [**link**](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshg
 ## News and Updates</a>
 
 ### News <a name="news"></a>
-- **`[2025/06/13]`** All data (including videos, captions, VQA, 3D gaze, and bbox) are up-to-date.
+- **`[2025/06/13]`** All data (including videos, captions, VQA, 3D gaze, and bbox) are **up-to-date**.
 
-- **`[2025/05/21]`** AIC challenge Track2 Test data for ICCV 2025 is released and [evaluation](https://eval.aicitychallenge.org/aicity2025/login) is open!
+- **`[2025/05/21]`** AIC challenge Track2 Test data for **ICCV 2025** is released and [evaluation](https://eval.aicitychallenge.org/aicity2025/login) is open!
   
 - **`[2024/07/25]`** WTS dataset is accepted by ECCV24! Updated arXiv [paper](https://arxiv.org/abs/2407.15350)! 
 
@@ -63,9 +63,9 @@ WTS provides the largest number of videos with long fine-grained video descripti
 
 ## Dataset Download
 
-1. Please submit request through [Google Form](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) first.
-2. You will get a DropBox link and a Google Drive link. They have identical content, so you can choose either one.
-3. For the Google Drive, in case you do not have access, request on Google Drive and it will be approved manually as long as you have done Step 1.
+1. Please **submit request** through [Google Form](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe6eshgQQyf1wZmJkgnqsoDaFb_h-673qG7VHPxapkhh30_Gw/viewform?usp=send_form) first.
+2. You will get a DropBox link and a Google Drive link. They have identical content, so you can choose **either one**.
+3. For the Google Drive, in case you do not have access, **request on Google Drive** and it will be approved manually as long as you have completed Step 1.
 
 
 ## Dataset Overview
@@ -73,13 +73,13 @@ WTS provides the largest number of videos with long fine-grained video descripti
 ### Internal and External Datasets
 As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
 1. Internal dataset:
-Real-world WTS data including traffic accidents. We collected them from scratch.
+Real-world WTS data including traffic accidents. We collected them **from scratch**.
 
 2. External dataset:
 Based on [BDD100K](https://www.vis.xyz/bdd100k/) data, we filtered out pedestrian-centric videos. We call it `BDD_PC_5K`.
 
 
-### Caption and VQA
+### Videos, Caption and VQA
 This challenge consists of **2 tasks**:
 - Captioning task
 - VQA task
@@ -124,7 +124,7 @@ To help you navigate through the downloaded files, here we list the **folder lin
 
 
 ### Public Test split
-- For both internal & external dataset:
+- For both internal & external datasets:
   - [Videos and phase start/end timestamps](https://drive.google.com/file/d/1f32teoQ4OWLCe7AHisHvkTH3woQ3x768/view?usp=drive_link)
   - [Bbox](https://drive.google.com/file/d/1y8BANRcuf1wgHS7DvNwae0HhXjjrem0E/view?usp=drive_link)
   - [VQA](https://drive.google.com/file/d/1ArrB4r100958xbFewJXRar77VnWECFIp/view?usp=drive_link)
@@ -216,6 +216,8 @@ Caption JSON format:
 ...
 ```
 
+<p>&nbsp;</p>
+
 ### BBox 
 BBox annotations for the first frame of each segment in the video. Note that not all videos have the bbox metadata, as there are some views that cannot cover the pedestrian or vehicle. Also, when the first-frame bbox for a phase is too small, we do not generate tracked bbox for that phase.
 
@@ -291,10 +293,13 @@ external/
     │   │   ├── video1015_caption.json
 ...
 ```
+<p>&nbsp;</p>
+
 
 ### Gaze and Head Position
 See the [Gaze README](gaze/README.md).
 
+<p>&nbsp;</p>
 
 ### VQA
 
@@ -560,7 +565,10 @@ Note:
 
 ## Annotation Manner <a name="licenseandcitation"></a>
 
-will be updated with the arXiv paper soon.
+Our annotation pipeline.
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/63fa5f89-662c-455c-ac6a-9f06223d009c" />
+
+
 
 ## License and Citation <a name="licenseandcitation"></a>
 Please refer to our license from WTS dataset [homepage](https://woven-visionai.github.io/wts-dataset-homepage/)
