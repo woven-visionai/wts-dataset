@@ -76,50 +76,52 @@ As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consi
 2. External dataset: videos originate form the BDD dataset
 Internal and external dataset are mixed to form our WTS dataset.
 
-This challenge consists of 2 tracks:
+<p>&nbsp;</p>
+
+This challenge consists of **2 tracks**:
 - Captioning task
 - VQA task
-So we have provided the videos, captions, and VQA ground truth for the train/val split.
+So we have provided the **videos, captions, and VQA ground truth** for the train/val split.
 
-Additionally, we provide metadata at our best effort:
+<p>&nbsp;</p>
+
+Additionally, we provide **metadata** at our best effort:
 - Bbox (of the pedestrian and the vehicle)
   - We provide 2 versions:
     - bbox_annotated (i.e. human annotations of the first frame of each phase only)
     - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything)
-- 3D Gaze of the pedestrian
+- 3D Gaze and 2D head position of the pedestrian
+
+- <p>&nbsp;</p>
 
 Above forms our WTS dataset.
 
 
 ## Dataset Structure
-To help you navigate through the downloaded files, here we list the folder link of each part of data.
+To help you navigate through the downloaded files, here we list the **folder link of each part **of data.
 
-- Train/val split
+### Train/val split
   - Internal dataset
-    - [Videos](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
-    - [Captions](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
+    - [Video](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
+    - [Caption](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
     - [VQA](https://drive.google.com/file/d/1qejf0VO33v-Rm-8X4-leKclgakoLJY1w/view?usp=drive_link)
-    - Bbox:
-      - [bbox_annotated](https://drive.google.com/file/d/1HLmzMapqRJLyM5Ema5oWrJBktZ2iGbLa/view?usp=drive_link)
-      - [bbox_generated](https://drive.google.com/file/d/1PJZlgluyxCjgkrfVTnXK24FupDYEEyB0/view?usp=drive_link)
-    - [3D gaze](https://drive.google.com/file/d/1744aqEwUuOFGyCVHNtthsAZtHf7ekEbG/view?usp=drive_link)
+    - [bbox_annotated](https://drive.google.com/file/d/1HLmzMapqRJLyM5Ema5oWrJBktZ2iGbLa/view?usp=drive_link)
+    - [bbox_generated](https://drive.google.com/file/d/1PJZlgluyxCjgkrfVTnXK24FupDYEEyB0/view?usp=drive_link)
+    - [3D Gaze](https://drive.google.com/file/d/1744aqEwUuOFGyCVHNtthsAZtHf7ekEbG/view?usp=drive_link)
     - [Head](https://drive.google.com/file/d/1tX1LGONFvkgFLWWUX31eyN6YkhpK-1nW/view?usp=drive_link)
+
+<p>&nbsp;</p>
+      
   - External dataset
-    - Videos: [Google Drive link]()
-    - Captions: [Google Drive link]()
-    - VQA: [Google Drive link]()
-    - Bbox: [Google Drive link]()
-    - 3D gaze: [Google Drive link]()
-    - Head: [Google Drive link]()
-   
-
-    - Videos: [Google Drive link]()
-    - Captions: [Google Drive link]()
-    - VQA: [Google Drive link]()
-    - Bbox: [Google Drive link]()
-    - 3D gaze: [Google Drive link]()
+    - [Video](https://drive.google.com/file/d/1EJgLslKvyKMUyPC-aWR8YpzNZRBUu-gg/view?usp=drive_link)
+    - [VQA, Caption, and Bbox](https://drive.google.com/file/d/1rzExQcjkuV3_C4WtDBRWHBwBiRnBzxtO/view?usp=drive_link)
 
 
+## Public Test split
+- For both internal & external dataset:
+  - [Videos and phase start/end timestamps](https://drive.google.com/file/d/1f32teoQ4OWLCe7AHisHvkTH3woQ3x768/view?usp=drive_link)
+  - [Bbox](https://drive.google.com/file/d/1y8BANRcuf1wgHS7DvNwae0HhXjjrem0E/view?usp=drive_link)
+  - [VQA](https://drive.google.com/file/d/1ArrB4r100958xbFewJXRar77VnWECFIp/view?usp=drive_link)
 
 ## Dataset Format and Content <a name="datastructure"></a>
 we have two kinds of video data provided for use:
