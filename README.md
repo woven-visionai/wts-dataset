@@ -105,6 +105,7 @@ It's **optional** for you to utilize these additional metadata for your algorith
 
 Above forms our WTS dataset.
 
+<p>&nbsp;</p>
 
 ## Dataset File Structure
 To help you navigate through the downloaded files, here we list the **folder link of each part** of data.
@@ -131,10 +132,8 @@ To help you navigate through the downloaded files, here we list the **folder lin
   - [Bbox](https://drive.google.com/file/d/1y8BANRcuf1wgHS7DvNwae0HhXjjrem0E/view?usp=drive_link)
   - [VQA](https://drive.google.com/file/d/1ArrB4r100958xbFewJXRar77VnWECFIp/view?usp=drive_link)
 
-## Dataset Format and Content <a name="datastructure"></a>
 
-
-### Video Data
+## Video Data Structure
 
 All collected WTS video data are stored under the `videos` folder. 
 Some scenarios have multiple-view videos.
@@ -173,7 +172,7 @@ external/
 ...
 ```
 
-## Annotations
+## Annotation Data Format and Structure
 
 ### Caption
 
