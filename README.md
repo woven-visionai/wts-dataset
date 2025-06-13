@@ -69,6 +69,8 @@ WTS provides the largest number of videos with long fine-grained video descripti
 
 # Dataset File Structure 
 
+## Dataset Facts
+
 As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
 1. Internal dataset: the dataset where we filmed and collected from scratch
 2. External dataset: videos originate form the BDD dataset
@@ -81,22 +83,27 @@ So we have provided the videos, captions, and VQA ground truth for the train/val
 
 Additionally, we provide metadata at our best effort:
 - Bbox (of the pedestrian and the vehicle)
+  - We provide 2 versions:
+    - bbox_annotated (i.e. human annotations of the first frame of each phase only)
+    - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything)
 - 3D Gaze of the pedestrian
 
 Above forms our WTS dataset.
 
+
+## Dataset Structure
 To help you navigate through the downloaded files, here we list the folder link of each part of data.
 
 - Train/val split
   - Internal dataset
-    - Videos: [Google Drive link](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
-    - Captions: [Google Drive link](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
-    - VQA: [Google Drive link](https://drive.google.com/file/d/1qejf0VO33v-Rm-8X4-leKclgakoLJY1w/view?usp=drive_link)
+    - [Videos](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
+    - [Captions](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
+    - [VQA](https://drive.google.com/file/d/1qejf0VO33v-Rm-8X4-leKclgakoLJY1w/view?usp=drive_link)
     - Bbox:
-      - bbox_annotated (i.e. human annotations of the first frame of each phase only) [Google Drive link](https://drive.google.com/file/d/1HLmzMapqRJLyM5Ema5oWrJBktZ2iGbLa/view?usp=drive_link)
-      - bbox_generated (i.e. including above, and generated bboxes of the following frames using Track-Anything) [Google Drive link](https://drive.google.com/file/d/1PJZlgluyxCjgkrfVTnXK24FupDYEEyB0/view?usp=drive_link)
-    - 3D gaze: [Google Drive link](https://drive.google.com/file/d/1744aqEwUuOFGyCVHNtthsAZtHf7ekEbG/view?usp=drive_link)
-    - Head: [Google Drive link](https://drive.google.com/file/d/1tX1LGONFvkgFLWWUX31eyN6YkhpK-1nW/view?usp=drive_link)
+      - [bbox_annotated](https://drive.google.com/file/d/1HLmzMapqRJLyM5Ema5oWrJBktZ2iGbLa/view?usp=drive_link)
+      - [bbox_generated](https://drive.google.com/file/d/1PJZlgluyxCjgkrfVTnXK24FupDYEEyB0/view?usp=drive_link)
+    - [3D gaze](https://drive.google.com/file/d/1744aqEwUuOFGyCVHNtthsAZtHf7ekEbG/view?usp=drive_link)
+    - [Head](https://drive.google.com/file/d/1tX1LGONFvkgFLWWUX31eyN6YkhpK-1nW/view?usp=drive_link)
   - External dataset
     - Videos: [Google Drive link]()
     - Captions: [Google Drive link]()
