@@ -70,15 +70,15 @@ WTS provides the largest number of videos with long fine-grained video descripti
 
 ## Dataset Overview
 
-### Internal and External Datasets
+### Main and External Datasets
 As described in our [paper](https://arxiv.org/abs/2407.15350), the dataset consists of 2 parts:
-1. **Internal dataset:**
+1. **Main dataset:**
 
     Real-world WTS data including traffic accidents. We collected them **from scratch**.
 
-2. **External dataset:**
+2. **External dataset (BDD_PC_5K):**
 
-    Based on [BDD100K](https://www.vis.xyz/bdd100k/) data, we filtered out pedestrian-centric videos. We call it `BDD_PC_5K`.
+    Based on [BDD100K](https://www.vis.xyz/bdd100k/) data, we filtered out **pedestrian-centric** videos. We call it `BDD_PC_5K`.
 
 
 ### Videos, Caption and VQA
@@ -113,7 +113,7 @@ Above forms our WTS dataset.
 To help you navigate through the downloaded files, here we list the **folder link of each part** of data.
 
 ### Train/Val Split
-  - Internal dataset
+  - Main dataset
     - [Video](https://drive.google.com/file/d/1U_cpSGMD8BKr6WZJKwBfFljEPm2g-EVm/view?usp=drive_link)
     - [Caption](https://drive.google.com/file/d/1JhBTxusph_1I1BhGaA8Ykx7EowcuK370/view?usp=drive_link)
     - [VQA](https://drive.google.com/file/d/1qejf0VO33v-Rm-8X4-leKclgakoLJY1w/view?usp=drive_link)
@@ -123,13 +123,13 @@ To help you navigate through the downloaded files, here we list the **folder lin
     - [Head](https://drive.google.com/file/d/1tX1LGONFvkgFLWWUX31eyN6YkhpK-1nW/view?usp=drive_link)
 
       
-  - External dataset
+  - External dataset (BDD_PC_5K)
     - [Video](https://drive.google.com/file/d/1EJgLslKvyKMUyPC-aWR8YpzNZRBUu-gg/view?usp=drive_link)
     - [VQA, Caption, and Bbox](https://drive.google.com/file/d/1rzExQcjkuV3_C4WtDBRWHBwBiRnBzxtO/view?usp=drive_link)
 
 
 ### Public Test Split
-- For both internal & external datasets:
+- For both main & external datasets:
   - [Videos and phase start/end timestamps](https://drive.google.com/file/d/1f32teoQ4OWLCe7AHisHvkTH3woQ3x768/view?usp=drive_link)
   - [Bbox](https://drive.google.com/file/d/1y8BANRcuf1wgHS7DvNwae0HhXjjrem0E/view?usp=drive_link)
   - [VQA](https://drive.google.com/file/d/1ArrB4r100958xbFewJXRar77VnWECFIp/view?usp=drive_link)
