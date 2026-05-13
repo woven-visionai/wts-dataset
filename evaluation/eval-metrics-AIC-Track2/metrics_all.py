@@ -17,6 +17,8 @@ def get_args():
     parser.add_argument('--help', action='help', help='Show this help message and exit')
     parser.add_argument("--predictions_file", type=str, help="path to predictions file", required=True)
     parser.add_argument("--ground_truth", type=str, default="labels/gt", help="path to ground truth json files")
+    parser.add_argument("--internal", action="store_true", default=False,
+                        help="evaluate only on internal (WTS) data, skipping external (BDD_PC_5K)")
 
     return parser.parse_args()
 
@@ -261,10 +263,7 @@ def evaluate_one_dataset(predictions_file, ground_truth_dir_path, internal):
         print("=="*20)
 
     except Exception as e:
-        if mr:
-            print('{"error": "%s"}' % repr(e))
-        else:
-            print("Error: %s" % repr(e))
+        print("Error: %s" % repr(e))
         traceback.print_exc()
         exit()
 
@@ -277,11 +276,13 @@ if __name__ == '__main__':
 
     gt_internal = f'{args.ground_truth}/annotations'
     gt_external = f'{args.ground_truth}/external/BDD_PC_5K/annotations'
-    if not os.path.exists(gt_internal) or not os.path.exists(gt_external):
-        if args.mr:
-            print('{"error": "Internal or external ground truth labels missing."}')
-        else:
-            print("Error: Internal or external ground truth labels missing.")
+
+    if not os.path.exists(gt_internal):
+        print("Error: Internal ground truth labels missing.")
+        exit()
+
+    if not args.internal and not os.path.exists(gt_external):
+        print("Error: External ground truth labels missing. Use --internal to evaluate only on WTS data.")
         exit()
 
     # evaluate internal videos
@@ -290,18 +291,24 @@ if __name__ == '__main__':
         gt_internal,
         internal=True,
     )
-    # evaluate external videos
-    metrics_all_category_mean_external, mean_score_external = evaluate_one_dataset(
-        args.predictions_file,
-        gt_external,
-        internal=False,
-    )
 
-    final_score_overall = (mean_score_internal + mean_score_external) / 2
+    if args.internal:
+        # Only internal (WTS) evaluation
+        results = {f'{k}_i': v for k, v in metrics_all_category_mean_internal.items()}
+        results['s2'] = mean_score_internal
+        print("Final mean score (internal only): " + str(mean_score_internal))
+    else:
+        # evaluate external videos
+        metrics_all_category_mean_external, mean_score_external = evaluate_one_dataset(
+            args.predictions_file,
+            gt_external,
+            internal=False,
+        )
 
-    results = {f'{k}_i':v for k,v in metrics_all_category_mean_internal.items()}
-    results.update({f'{k}_e':v for k,v in metrics_all_category_mean_external.items()})
-    results['s2'] = final_score_overall
-   
-    print("Final mean score: " + str(final_score_overall))
+        final_score_overall = (mean_score_internal + mean_score_external) / 2
+
+        results = {f'{k}_i': v for k, v in metrics_all_category_mean_internal.items()}
+        results.update({f'{k}_e': v for k, v in metrics_all_category_mean_external.items()})
+        results['s2'] = final_score_overall
+        print("Final mean score: " + str(final_score_overall))
 

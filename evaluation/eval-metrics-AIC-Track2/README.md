@@ -53,6 +53,15 @@ The sample script is here for using:
 python metrics_all.py --predictions_file <path_to_predictions_json> --ground_truth <path_to_ground_truth_folder>
 ```
 
+### Evaluate only on WTS (internal) test set AIC 2026 Track 2 ###
+
+To evaluate only on the WTS dataset without requiring the external BDD_PC_5K data, use the `--internal` flag:
+```
+python metrics_all.py --predictions_file <path_to_predictions_json> --ground_truth <path_to_ground_truth_folder> --internal
+```
+
+This will skip the external (BDD_PC_5K) evaluation and report the final score based solely on the WTS (internal) data.
+
 The output for an example will be looks like below:
 ```
 === Results for internal videos ===
